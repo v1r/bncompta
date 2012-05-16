@@ -1,0 +1,602 @@
+<bank_list>
+    <bank>
+        <name>BANQUE CALEDONIENNE D INVEST B C I </name>
+        <bic></bic>
+        <bank_code>17499 </bank_code>
+        <address>98849 NOUMEA CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE DE TAHITI </name>
+        <bic></bic>
+        <bank_code>12239 </bank_code>
+        <address>98713 PAPEETE  </address>
+    </bank>
+    <bank>
+        <name>BNP PARIBAS NOUVELLE CALEDONIE </name>
+        <bic></bic>
+        <bank_code>17939 </bank_code>
+        <address>98849 NOUMEA  </address>
+    </bank>
+    <bank>
+        <name>BANQUE FRSE COMMERCIALE ANTILLES GUYANE </name>
+        <bic></bic>
+        <bank_code>18729 </bank_code>
+        <address>97151 POINTE A PITRE CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE DE LA REUNION </name>
+        <bic></bic>
+        <bank_code>12169 </bank_code>
+        <address>97711 ST DENIS CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>STE GENERALE CALEDONIENNE DE BQ S G C B </name>
+        <bic></bic>
+        <bank_code>18319 </bank_code>
+        <address>98800 NOUMEA NOUVELLE CALEDONIE  </address>
+    </bank>
+    <bank>
+        <name>GE FINANCEMENT PACIFIQUE SAS CENTRE CIAL LA BELLE VIE </name>
+        <bic></bic>
+        <bank_code>14848 </bank_code>
+        <address>98800 NOUMEA  </address>
+    </bank>
+    <bank>
+        <name>BNP PARIBAS REUNION </name>
+        <bic></bic>
+        <bank_code>41919 </bank_code>
+        <address>97400 SAINT DENIS  </address>
+    </bank>
+    <bank>
+        <name>CRCAM DE LA GUADELOUPE </name>
+        <bic></bic>
+        <bank_code>14006 </bank_code>
+        <address>97176 LES ABYMES CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CRCAM DE LA MARTINIQUE ET DE LA GUYANE </name>
+        <bic></bic>
+        <bank_code>19806 </bank_code>
+        <address>97232 LE LAMENTIN CEDEX 2  </address>
+    </bank>
+    <bank>
+        <name>CAISSE NATIONALE D EPARGNE LA POSTE PRELEVEMENTS SERV CNE </name>
+        <bic></bic>
+        <bank_code>10011 </bank_code>
+        <address>75900 PARIS CHEQUES  </address>
+    </bank>
+    <bank>
+        <name>LYONNAISE DE BANQUE LB MOYENS DE PAIEMENT </name>
+        <bic></bic>
+        <bank_code>10096 </bank_code>
+        <address>69160 TASSIN LA DEMI LUNE  </address>
+    </bank>
+    <bank>
+        <name>BRED BANQUE POPULAIRE </name>
+        <bic>BREDFRPP </bic>
+        <bank_code>10107 </bank_code>
+        <address>94018 CRETEIL CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CREDIT MOBILIER DE MONACO CMM </name>
+        <bic></bic>
+        <bank_code>10160 </bank_code>
+        <address>98002 MONACO CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE CHAIX </name>
+        <bic>CHAIFR2A </bic>
+        <bank_code>10178 </bank_code>
+        <address>84027 AVIGNON CEDEX 1  </address>
+    </bank>
+    <bank>
+        <name>CRCAM DU NORD EST RMP PREL </name>
+        <bic></bic>
+        <bank_code>10206 </bank_code>
+        <address>08000 CHARLEVILLE MEZIERES  </address>
+    </bank>
+    <bank>
+        <name>BANQUE LAYDERNIER CREDIT DU NORD </name>
+        <bic>LAYDFR2W </bic>
+        <bank_code>10228 </bank_code>
+        <address>59023 LILLE CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE COURTOIS CREDIT DU NORD </name>
+        <bic>COURFR2T </bic>
+        <bank_code>10268 </bank_code>
+        <address>59023 LILLE CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE RHONE ALPES CREDIT DU NORD </name>
+        <bic>RALPFR2G </bic>
+        <bank_code>10468 </bank_code>
+        <address>59023 LILLE CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE DE SAVOIE </name>
+        <bic>BSAVFR2C </bic>
+        <bank_code>10548 </bank_code>
+        <address>73000 CHAMBERY CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE TARNEAUD CREDIT DU NORD </name>
+        <bic>TARNFR2L </bic>
+        <bank_code>10558 </bank_code>
+        <address>59023 LILLE CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CREDIT COMMERCIAL DU SUD OUEST </name>
+        <bic>CCBPFRPP555 </bic>
+        <bank_code>10638 </bank_code>
+        <address>33000 BORDEAUX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE POPULAIRE BOURGOGNE FRANCHE COMTE </name>
+        <bic>CCBPFRPPDJN </bic>
+        <bank_code>10807 </bank_code>
+        <address>21000 DIJON  </address>
+    </bank>
+    <bank>
+        <name>BANQUE POPULAIRE DU SUD OUEST </name>
+        <bic>CCBPFRPPPPG </bic>
+        <bank_code>10907 </bank_code>
+        <address>33000 BORDEAUX  </address>
+    </bank>
+    <bank>
+        <name>CRCAM DE CHAMPAGNE BOURGOGNE </name>
+        <bic></bic>
+        <bank_code>11006 </bank_code>
+        <address>89007 AUXERRE CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BSI MONACO SAM LE ST MICHEL </name>
+        <bic></bic>
+        <bank_code>11018 </bank_code>
+        <address>98000 MONACO  </address>
+    </bank>
+    <bank>
+        <name>CRCAM NORD MIDI PYRENEES SERVICE MP CAUSSE COMTAL </name>
+        <bic></bic>
+        <bank_code>11206 </bank_code>
+        <address>12033 RODEZ CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>CRCAM D ALPES PROVENCE </name>
+        <bic></bic>
+        <bank_code>11306 </bank_code>
+        <address>05003 GAP CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BPN BANCO PORTUGUES DE NEGOCIOS SA </name>
+        <bic></bic>
+        <bank_code>11378 </bank_code>
+        <address>94100 ST MAUR DES FOSSES  </address>
+    </bank>
+    <bank>
+        <name>BNP PARIBAS WEALTH MANAGEMENT MONACO </name>
+        <bic></bic>
+        <bank_code>11498 </bank_code>
+        <address>98005 MONACO CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE DU CREDIT MUT ILE DE FRANCE BCMI </name>
+        <bic></bic>
+        <bank_code>11628 </bank_code>
+        <address>67913 STRASBOURG CEDEX 09  </address>
+    </bank>
+    <bank>
+        <name>BANQUE GESTION ED DE ROTHSCHILD MONACO </name>
+        <bic></bic>
+        <bank_code>11668 </bank_code>
+        <address>98006 MONACO  </address>
+    </bank>
+    <bank>
+        <name>CRCAM CHARENTE-MARITIME DEUX-SEVRES </name>
+        <bic></bic>
+        <bank_code>11706 </bank_code>
+        <address>79028 NIORT CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>BANQUE FEDERATIVE DU CREDIT MUTUEL </name>
+        <bic></bic>
+        <bank_code>11808 </bank_code>
+        <address>67913 STRASBOURG CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>BANQUE ECONOMIE COMMERCE ET MONETIQUE </name>
+        <bic></bic>
+        <bank_code>11899 </bank_code>
+        <address>67913 STRASBOURG CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>BANQUE POUYANNE </name>
+        <bic>POUYFR21 </bic>
+        <bank_code>11989 </bank_code>
+        <address>64300 ORTHEZ  </address>
+    </bank>
+    <bank>
+        <name>UBS MONACO </name>
+        <bic></bic>
+        <bank_code>11999 </bank_code>
+        <address>98000 MONACO  </address>
+    </bank>
+    <bank>
+        <name>CRCAM DE LA CORSE </name>
+        <bic></bic>
+        <bank_code>12006 </bank_code>
+        <address>20193 AJACCIO CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CRCAM DES COTES D ARMOR </name>
+        <bic></bic>
+        <bank_code>12206 </bank_code>
+        <address>22098 ST BRIEUC CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>CRCAM CHARENTE PERIGORD </name>
+        <bic></bic>
+        <bank_code>12406 </bank_code>
+        <address>16800 SOYAUX  </address>
+    </bank>
+    <bank>
+        <name>BARCLAYS BANK PLC MONACO </name>
+        <bic></bic>
+        <bank_code>12448 </bank_code>
+        <address>98000 MONACO  </address>
+    </bank>
+    <bank>
+        <name>CRCAM FRANCHE COMTE </name>
+        <bic></bic>
+        <bank_code>12506 </bank_code>
+        <address>25084 BESANCON CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>CAJA AHOR MONT PIED GUIPUZCOA SEBA KUTXA </name>
+        <bic></bic>
+        <bank_code>12518 </bank_code>
+        <address>64183 BAYONNE CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE DELUBAC ET CIE </name>
+        <bic>DELUFR22 </bic>
+        <bank_code>12879 </bank_code>
+        <address>07160 CHEYLARD LE  </address>
+    </bank>
+    <bank>
+        <name>CRCAM DU FINISTERE </name>
+        <bic></bic>
+        <bank_code>12906 </bank_code>
+        <address>29555 QUIMPER CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>CRCAM DE TOULOUSE 31 </name>
+        <bic></bic>
+        <bank_code>13106 </bank_code>
+        <address>31005 TOULOUSE CEDEX 6  </address>
+    </bank>
+    <bank>
+        <name>CAISSE D EPARGNE DE MIDI PYRENEES </name>
+        <bic>CEPAFRPP313 </bic>
+        <bank_code>13135 </bank_code>
+        <address>31023 TOULOUSE  </address>
+    </bank>
+    <bank>
+        <name>BANQUE KOLB CREDIT DU NORD </name>
+        <bic>KOLBFR21 </bic>
+        <bank_code>13259 </bank_code>
+        <address>59023 LILLE CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CRCAM D AQUITAINE LE MAS </name>
+        <bic></bic>
+        <bank_code>13306 </bank_code>
+        <address>40800 AIRE SUR L ADOUR  </address>
+    </bank>
+    <bank>
+        <name>KBL MONACO PRIVATE BANKERS </name>
+        <bic></bic>
+        <bank_code>13338 </bank_code>
+        <address>98000 MONACO CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE MARTIN MAUREL </name>
+        <bic>BMMMFR2A </bic>
+        <bank_code>13369 </bank_code>
+        <address>13006 MARSEILLE  </address>
+    </bank>
+    <bank>
+        <name>BANQUE MARZE </name>
+        <bic>BMRZFR21 </bic>
+        <bank_code>13379 </bank_code>
+        <address>07205 AUBENAS CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CAISSE D EPARGNE DU LANGUEDOC ROUSSILLON SECRETARIAT DPB </name>
+        <bic>CEPAFRPP348 </bic>
+        <bank_code>13485 </bank_code>
+        <address>34184 MONTPELLIER CEDEX 04  </address>
+    </bank>
+    <bank>
+        <name>HSBC PRIVATE BANK (MONACO) S A </name>
+        <bic></bic>
+        <bank_code>13488 </bank_code>
+        <address>98000 MONACO  </address>
+    </bank>
+    <bank>
+        <name>BANQUE NUGER CREDIT DU NORD </name>
+        <bic>BNUGFR21 </bic>
+        <bank_code>13489 </bank_code>
+        <address>59023 LILLE CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CRCAM D ILLE ET VILAINE </name>
+        <bic></bic>
+        <bank_code>13606 </bank_code>
+        <address>35040 RENNES CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE POP CENTRE ATLANTIQUE (2E DU NOM) </name>
+        <bic>CCBPFRPPNIO </bic>
+        <bank_code>13607 </bank_code>
+        <address>79000 NIORT  </address>
+    </bank>
+    <bank>
+        <name>BANQUE POPULAIRE ATLANTIQUE </name>
+        <bic>CCBPFRPPNAN </bic>
+        <bank_code>13807 </bank_code>
+        <address>49001 ANGERS CEDEX 01  </address>
+    </bank>
+    <bank>
+        <name>CREDIT SUISSE (MONACO) </name>
+        <bic></bic>
+        <bank_code>14048 </bank_code>
+        <address>98003 MONACO  </address>
+    </bank>
+    <bank>
+        <name>CAISSE D EPARGNE LOIRE DROME ARDECHE SERVICE COURRIER AUTO PREL </name>
+        <bic>CEPAFRPP426 </bic>
+        <bank_code>14265 </bank_code>
+        <address>42012 ST ETIENNE CEDEX 2  </address>
+    </bank>
+    <bank>
+        <name>CRCAM VAL DE FRANCE </name>
+        <bic></bic>
+        <bank_code>14406 </bank_code>
+        <address>28088 CHARTRES CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CRCAM LOIRE HAUTE LOIRE </name>
+        <bic></bic>
+        <bank_code>14506 </bank_code>
+        <address>42000 ST ETIENNE  </address>
+    </bank>
+    <bank>
+        <name>BANK JULIUS BAER( MONACO) S A M </name>
+        <bic></bic>
+        <bank_code>14508 </bank_code>
+        <address>98000 MONACO  </address>
+    </bank>
+    <bank>
+        <name>BANQUE POPULAIRE PROVENCALE ET CORSE SERVICE GESTION DES FLUX </name>
+        <bic>CCBPFRPPMAR </bic>
+        <bank_code>14607 </bank_code>
+        <address>13274 MARSEILLE  </address>
+    </bank>
+    <bank>
+        <name>BANQUE POPULAIRE LORRAINE CHAMPAGNE </name>
+        <bic>CCBPFRPPMTZ </bic>
+        <bank_code>14707 </bank_code>
+        <address>57021 METZ CEDEX 1  </address>
+    </bank>
+    <bank>
+        <name>CAMEFI BANQUE CIT MUTUEL ARKEA </name>
+        <bic></bic>
+        <bank_code>14798 </bank_code>
+        <address>29808 BREST CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>CRCAM CENTRE LOIRE </name>
+        <bic></bic>
+        <bank_code>14806 </bank_code>
+        <address>18920 BOURGES CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>BANCA POPOLARE DI SONDRIO SUISSE VILLA FLORIANE </name>
+        <bic></bic>
+        <bank_code>14908 </bank_code>
+        <address>98011 MONACO CEDEX  </address>
+    </bank>
+    <bank>
+        <name>MFF LE METROPOLE </name>
+        <bic></bic>
+        <bank_code>15078 </bank_code>
+        <address>92800 PUTEAUX  </address>
+    </bank>
+    <bank>
+        <name>CIT FCIER CMUNAL ALSACE LORRAINE BANQUE </name>
+        <bic>CFCLFR21 </bic>
+        <bank_code>15149 </bank_code>
+        <address>67003 STRASBOURG CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CAISSE AGRIC CREDIT MUTUEL </name>
+        <bic></bic>
+        <bank_code>15429 </bank_code>
+        <address>67913 STRASBOURG CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>CAISSE FEDER CIT MUT DU CENTRE PL DE L EUROPE </name>
+        <bic></bic>
+        <bank_code>15459 </bank_code>
+        <address>45920 ORLEANS CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>CAISSE FEDER CIT MUT MAIN ANJ BAS NORM SERV BANCAIRES AUTO PRELEVEMENTS </name>
+        <bic></bic>
+        <bank_code>15489 </bank_code>
+        <address>53083 LAVAL CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>CREDIT MUTUEL AGRICOLE ET RURAL OCEAN SERV ECHANGES INTERBANCAIRES </name>
+        <bic>CMCIFR2A, CMUTFR21 </bic>
+        <bank_code>15549 </bank_code>
+        <address>85001 LA ROCHE SUR YON CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CAISSE FEDER CIT MUT NORD EUROPE SERVICE PRELEVEMENTS </name>
+        <bic></bic>
+        <bank_code>15629 </bank_code>
+        <address>59800 LILLE  </address>
+    </bank>
+    <bank>
+        <name>CAISSE FEDER CIT MUT LOIR ATL CENT OUEST </name>
+        <bic></bic>
+        <bank_code>15749 </bank_code>
+        <address>44326 NANTES CEDEX 3  </address>
+    </bank>
+    <bank>
+        <name>CAISSE FEDER CIT MUT D ANJOU </name>
+        <bic></bic>
+        <bank_code>15829 </bank_code>
+        <address>49006 ANGERS CEDEX 01  </address>
+    </bank>
+    <bank>
+        <name>CAISSE FEDER CIT MUT DE NORMANDIE </name>
+        <bic></bic>
+        <bank_code>15959 </bank_code>
+        <address>14000 CAEN  </address>
+    </bank>
+    <bank>
+        <name>CRCAM DU MORBIHAN </name>
+        <bic></bic>
+        <bank_code>16006 </bank_code>
+        <address>56956 VANNES CEDEX 9  </address>
+    </bank>
+    <bank>
+        <name>CSSE CIT MUNICIPAL DE BOULOGNE SUR MER </name>
+        <bic>CMUBFR21 </bic>
+        <bank_code>16170 </bank_code>
+        <address>62200 BOULOGNE SUR MER  </address>
+    </bank>
+    <bank>
+        <name>CREDIT MUT AGR RUR LOIRE-ATL CTRE-OUEST </name>
+        <bic></bic>
+        <bank_code>16179 </bank_code>
+        <address>44326 NANTES CEDEX 3  </address>
+    </bank>
+    <bank>
+        <name>CAISSE D EPARGNE D ALSACE </name>
+        <bic>CEPAFRPP670 </bic>
+        <bank_code>16705 </bank_code>
+        <address>67925 STRASBOURG  </address>
+    </bank>
+    <bank>
+        <name>CRCAM NORD DE FRANCE </name>
+        <bic></bic>
+        <bank_code>16706 </bank_code>
+        <address>62009 ARRAS  </address>
+    </bank>
+    <bank>
+        <name>BANQUE POPULAIRE DE L OUEST DIRECTION PRESTATIONS CLIENTELE </name>
+        <bic>CCBPFRPPBDX, CCBPFRPPREN </bic>
+        <bank_code>16707 </bank_code>
+        <address>35760 MONTGERMONT  </address>
+    </bank>
+    <bank>
+        <name>BANQUE POPULAIRE DES ALPES </name>
+        <bic>CCBPFRPPGRE </bic>
+        <bank_code>16807 </bank_code>
+        <address>74808 LA ROCHE SUR FORON CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE PASCHE (MONACO) LE MONTE CARLO PALACE </name>
+        <bic></bic>
+        <bank_code>16840 </bank_code>
+        <address>98000 MONACO  </address>
+    </bank>
+    <bank>
+        <name>CRCAM PYRENEES GASCOGNE </name>
+        <bic></bic>
+        <bank_code>16906 </bank_code>
+        <address>65003 TARBES CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CRCAM SUD MEDITERRANEE </name>
+        <bic></bic>
+        <bank_code>17106 </bank_code>
+        <address>66832 PERPIGNAN CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CSSE CIT MUNICIPAL DE TOULON </name>
+        <bic>CCUTFR21 </bic>
+        <bank_code>17150 </bank_code>
+        <address>83107 TOULON CEDEX  </address>
+    </bank>
+    <bank>
+        <name>CRCAM ALSACE VOSGES </name>
+        <bic></bic>
+        <bank_code>17206 </bank_code>
+        <address>67008 STRASBOURG CEDEX  </address>
+    </bank>
+    <bank>
+        <name>BANQUE POPULAIRE D ALSACE </name>
+        <bic>CCBPFRPPSTR </bic>
+        <bank_code>17607 </bank_code>
+        <address>68390 SAUSHEIM  </address>
+    </bank>
+    <bank>
+        <name>BANQUE DE L EUROPE MERIDIONALE - BEMO </name>
+        <bic></bic>
+        <bank_code>17619 </bank_code>
+        <address>75116 PARIS  </address>
+    </bank>
+    <bank>
+        <name>CSSE CIT MUNICIPAL DE NIMES </name>
+        <bic>CCMNFR21 </bic>
+        <bank_code>17620 </bank_code>
+        <address>30013 NIMES CEDEX 01  </address>
+    </bank>
+    <bank>
+        <name>STE DE BANQUE ET D EXPANSION SBE (2EME) </name>
+        <bic>SBEXFRP1 </bic>
+        <bank_code>17679 </bank_code>
+        <address>75725 PARIS CEDEX 15  </address>
+    </bank>
+    <bank>
+        <name>CRCAM CENTRE EST </name>
+        <bic></bic>
+        <bank_code>17806 </bank_code>
+        <address>69410 CHAMPAGNE AU MONT D OR  </address>
+    </bank>
+    <bank>
+        <name>CRCAM DE L ANJOU ET DU MAINE </name>
+        <bic></bic>
+        <bank_code>17906 </bank_code>
+        <address>72083 LE MANS CEDEX 09  </address>
+    </bank>
+    <bank>
+        <name>CAISSE D EPARGNE DE PICARDIE </name>
+        <bic>CEPAFRPP802 </bic>
+        <bank_code>18025 </bank_code>
+        <address>80007 AMIENS CEDEX 1  </address>
+    </bank>
+    <bank>
+        <name>CSSE CIT MUNICIPAL DE LYON </name>
+        <bic>CCMLFR21 </bic>
+        <bank_code>18050 </bank_code>
+        <address>69396 LYON CEDEX 03  </address>
+    </bank>
+    <bank>
+        <name>CRCAM DE PARIS ET D ILE DE FRANCE SERV TELEMATIQUE VIREM PRELEVEM </name>
+        <bic></bic>
+        <bank_code>18206 </bank_code>
+        <address>75596 PARIS CEDEX 12  </address>
+    </bank>
+    <bank>
+        <name>CRCAM NORMANDIE SEINE </name>
+        <bic></bic>
+        <bank_code>18306 </bank_code>
+        <address>76238 BOIS GUILLAUME CEDEX</address>
+    </bank>
+</bank_list>

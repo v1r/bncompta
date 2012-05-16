@@ -1,0 +1,125 @@
+<?php
+
+namespace Entities;
+
+/**
+ * Entities\SecurityBanList
+ */
+class SecurityBanList
+{
+    /**
+     * @var string $banIp
+     */
+    private $banIp;
+
+    /**
+     * @var integer $banStart
+     */
+    private $banStart;
+
+    /**
+     * @var integer $banEnd
+     */
+    private $banEnd;
+
+    /**
+     * @var string $banReason
+     */
+    private $banReason;
+
+    /**
+     * @var integer $id
+     */
+    private $id;
+
+
+    /**
+     * Set banIp
+     *
+     * @param string $banIp
+     */
+    public function setBanIp($banIp)
+    {
+        $this->banIp = $banIp;
+    }
+
+    /**
+     * Get banIp
+     *
+     * @return string $banIp
+     */
+    public function getBanIp()
+    {
+        return $this->banIp;
+    }
+
+    /**
+     * Set banStart
+     *
+     * @param integer $banStart
+     */
+    public function setBanStart($banStart)
+    {
+        $this->banStart = $banStart;
+    }
+
+    /**
+     * Get banStart
+     *
+     * @return integer $banStart
+     */
+    public function getBanStart()
+    {
+        return $this->banStart;
+    }
+
+    /**
+     * Set banEnd
+     *
+     * @param integer $banEnd
+     */
+    public function setBanEnd($banEnd)
+    {
+        $this->banEnd = $banEnd;
+    }
+
+    /**
+     * Get banEnd
+     *
+     * @return integer $banEnd
+     */
+    public function getBanEnd()
+    {
+        return $this->banEnd;
+    }
+
+    /**
+     * Set banReason
+     *
+     * @param string $banReason
+     */
+    public function setBanReason($banReason)
+    {
+        $this->banReason = $banReason;
+    }
+
+    /**
+     * Get banReason
+     *
+     * @return string $banReason
+     */
+    public function getBanReason()
+    {
+        return $this->banReason;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer $id
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

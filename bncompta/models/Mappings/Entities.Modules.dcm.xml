@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping                           http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">      
+    <entity name="Entities\Modules" table="modules"  repository-class="Entities\Repository\Modules">   >                                    
+        <id name="id" type="integer" length="11" column="id">             
+            <generator strategy="AUTO"/>             
+            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1" />         
+        </id>          
+        <field name="moduleName" column="name" type="string" length="100"      />   
+        <field name="moduleTitle" column="title" type="string" length="100"    />   
+        <field name="moduleDescription" column="description" type="string" length="100" />
+        <field name="moduleVersion" column="version" type="decimal" length="2"        /> 
+        <field name="moduleIsCore" column="is_core" type="smallint" length="1"        />
+        <field name="moduleIsEnabled" column="is_enabled" type="smallint" length="1"  /> 
+        <field name="moduleIconPath" column="icon_path" type="string" length="255"  /> 
+        <field name="modulePosition" column="position" type="smallint" length="1"  /> 
+         <one-to-many field="resources" target-entity="Entities\AclResources" mapped-by="modules" />
+    </entity>  
+</doctrine-mapping>

@@ -1,0 +1,235 @@
+<?php
+
+namespace Entities;
+
+/**
+ * Entities\Webservicecalls
+ */
+class Webservicecalls
+{
+    /**
+     * @var date $day
+     */
+    private $day;
+
+    /**
+     * @var smallint $account
+     */
+    private $account;
+
+    /**
+     * @var string $service
+     */
+    private $service;
+
+    /**
+     * @var string $method
+     */
+    private $method;
+
+    /**
+     * @var integer $calls
+     */
+    private $calls;
+
+    /**
+     * @var integer $items
+     */
+    private $items;
+
+    /**
+     * @var float $time
+     */
+    private $time;
+
+    /**
+     * @var decimal $cost
+     */
+    private $cost;
+
+    /**
+     * @var datetime $updated
+     */
+    private $updated;
+
+
+    /**
+     * Set day
+     *
+     * @param date $day
+     */
+    public function setDay($day)
+    {
+        $this->day = $day;
+    }
+
+    /**
+     * Get day
+     *
+     * @return date $day
+     */
+    public function getDay()
+    {
+        return $this->day;
+    }
+
+    /**
+     * Set account
+     *
+     * @param smallint $account
+     */
+    public function setAccount($account)
+    {
+        $this->account = $account;
+    }
+
+    /**
+     * Get account
+     *
+     * @return smallint $account
+     */
+    public function getAccount()
+    {
+        return $this->account;
+    }
+
+    /**
+     * Set service
+     *
+     * @param string $service
+     */
+    public function setService($service)
+    {
+        $this->service = $service;
+    }
+
+    /**
+     * Get service
+     *
+     * @return string $service
+     */
+    public function getService()
+    {
+        return $this->service;
+    }
+
+    /**
+     * Set method
+     *
+     * @param string $method
+     */
+    public function setMethod($method)
+    {
+        $this->method = $method;
+    }
+
+    /**
+     * Get method
+     *
+     * @return string $method
+     */
+    public function getMethod()
+    {
+        return $this->method;
+    }
+
+    /**
+     * Set calls
+     *
+     * @param integer $calls
+     */
+    public function setCalls($calls)
+    {
+        $this->calls = $calls;
+    }
+
+    /**
+     * Get calls
+     *
+     * @return integer $calls
+     */
+    public function getCalls()
+    {
+        return $this->calls;
+    }
+
+    /**
+     * Set items
+     *
+     * @param integer $items
+     */
+    public function setItems($items)
+    {
+        $this->items = $items;
+    }
+
+    /**
+     * Get items
+     *
+     * @return integer $items
+     */
+    public function getItems()
+    {
+        return $this->items;
+    }
+
+    /**
+     * Set time
+     *
+     * @param float $time
+     */
+    public function setTime($time)
+    {
+        $this->time = $time;
+    }
+
+    /**
+     * Get time
+     *
+     * @return float $time
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    /**
+     * Set cost
+     *
+     * @param decimal $cost
+     */
+    public function setCost($cost)
+    {
+        $this->cost = $cost;
+    }
+
+    /**
+     * Get cost
+     *
+     * @return decimal $cost
+     */
+    public function getCost()
+    {
+        return $this->cost;
+    }
+
+    /**
+     * Set updated
+     *
+     * @param datetime $updated
+     */
+    public function setUpdated($updated)
+    {
+        $this->updated = $updated;
+    }
+
+    /**
+     * Get updated
+     *
+     * @return datetime $updated
+     */
+    public function getUpdated()
+    {
+        return $this->updated;
+    }
+}

@@ -1,0 +1,179 @@
+<?php
+
+namespace Entities;
+
+/**
+ * Entities\AclUsersActions
+ */
+class AclUsersActions
+{
+    /**
+     * @var string $accessType
+     */
+    private $accessType;
+
+    /**
+     * @var integer $createdOn
+     */
+    private $createdOn;
+
+    /**
+     * @var integer $id
+     */
+    private $id;
+
+    /**
+     * @var Entities\AclGroupsActions
+     */
+    private $groups_actions;
+
+    /**
+     * @var Entities\AclActions
+     */
+    private $acl_actions;
+
+    /**
+     * @var Entities\Staffs
+     */
+    private $staffs;
+
+    /**
+     * @var Entities\Students
+     */
+    private $students;
+
+    public function __construct()
+    {
+        $this->groups_actions = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Set accessType
+     *
+     * @param string $accessType
+     */
+    public function setAccessType($accessType)
+    {
+        $this->accessType = $accessType;
+    }
+
+    /**
+     * Get accessType
+     *
+     * @return string $accessType
+     */
+    public function getAccessType()
+    {
+        return $this->accessType;
+    }
+
+    /**
+     * Set createdOn
+     *
+     * @param integer $createdOn
+     */
+    public function setCreatedOn($createdOn)
+    {
+        $this->createdOn = $createdOn;
+    }
+
+    /**
+     * Get createdOn
+     *
+     * @return integer $createdOn
+     */
+    public function getCreatedOn()
+    {
+        return $this->createdOn;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer $id
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Add groups_actions
+     *
+     * @param Entities\AclGroupsActions $groupsActions
+     */
+    public function addGroupsActions(\Entities\AclGroupsActions $groupsActions)
+    {
+        $this->groups_actions[] = $groupsActions;
+    }
+
+    /**
+     * Get groups_actions
+     *
+     * @return Doctrine\Common\Collections\Collection $groupsActions
+     */
+    public function getGroupsActions()
+    {
+        return $this->groups_actions;
+    }
+
+    /**
+     * Set acl_actions
+     *
+     * @param Entities\AclActions $aclActions
+     */
+    public function setAclActions(\Entities\AclActions $aclActions)
+    {
+        $this->acl_actions = $aclActions;
+    }
+
+    /**
+     * Get acl_actions
+     *
+     * @return Entities\AclActions $aclActions
+     */
+    public function getAclActions()
+    {
+        return $this->acl_actions;
+    }
+
+    /**
+     * Set staffs
+     *
+     * @param Entities\Staffs $staffs
+     */
+    public function setStaffs(\Entities\Staffs $staffs)
+    {
+        $this->staffs = $staffs;
+    }
+
+    /**
+     * Get staffs
+     *
+     * @return Entities\Staffs $staffs
+     */
+    public function getStaffs()
+    {
+        return $this->staffs;
+    }
+
+    /**
+     * Set students
+     *
+     * @param Entities\Students $students
+     */
+    public function setStudents(\Entities\Students $students)
+    {
+        $this->students = $students;
+    }
+
+    /**
+     * Get students
+     *
+     * @return Entities\Students $students
+     */
+    public function getStudents()
+    {
+        return $this->students;
+    }
+}

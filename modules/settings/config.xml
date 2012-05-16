@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module name="settings">
+    <title>
+        <fr>Configuration</fr>
+    </title>
+    <description>
+        <fr>Configuration de l'application.</fr>
+    </description>
+    <version>v0.1</version>
+    <menu></menu>
+    <enabled>1</enabled>
+    <is_core>1</is_core> 
+    <has_settings>1</has_settings> 
+    <type>mod_admin</type>
+    <icon_path>img/icons/configuration.png</icon_path>
+    <lang_file_name></lang_file_name>
+</module>

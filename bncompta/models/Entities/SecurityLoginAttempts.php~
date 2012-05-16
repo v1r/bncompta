@@ -1,0 +1,150 @@
+<?php
+
+namespace Entities;
+
+/**
+ * Entities\SecurityLoginAttempts
+ */
+class SecurityLoginAttempts
+{
+    /**
+     * @var string $attemptIp
+     */
+    private $attemptIp;
+
+    /**
+     * @var integer $attemptDate
+     */
+    private $attemptDate;
+
+    /**
+     * @var string $attemptBrowser
+     */
+    private $attemptBrowser;
+
+    /**
+     * @var string $attemptIdentity
+     */
+    private $attemptIdentity;
+
+    /**
+     * @var integer $attemptTimes
+     */
+    private $attemptTimes;
+
+    /**
+     * @var integer $id
+     */
+    private $id;
+
+
+    /**
+     * Set attemptIp
+     *
+     * @param string $attemptIp
+     */
+    public function setAttemptIp($attemptIp)
+    {
+        $this->attemptIp = $attemptIp;
+    }
+
+    /**
+     * Get attemptIp
+     *
+     * @return string $attemptIp
+     */
+    public function getAttemptIp()
+    {
+        return $this->attemptIp;
+    }
+
+    /**
+     * Set attemptDate
+     *
+     * @param integer $attemptDate
+     */
+    public function setAttemptDate($attemptDate)
+    {
+        $this->attemptDate = $attemptDate;
+    }
+
+    /**
+     * Get attemptDate
+     *
+     * @return integer $attemptDate
+     */
+    public function getAttemptDate()
+    {
+        return $this->attemptDate;
+    }
+
+    /**
+     * Set attemptBrowser
+     *
+     * @param string $attemptBrowser
+     */
+    public function setAttemptBrowser($attemptBrowser)
+    {
+        $this->attemptBrowser = $attemptBrowser;
+    }
+
+    /**
+     * Get attemptBrowser
+     *
+     * @return string $attemptBrowser
+     */
+    public function getAttemptBrowser()
+    {
+        return $this->attemptBrowser;
+    }
+
+    /**
+     * Set attemptIdentity
+     *
+     * @param string $attemptIdentity
+     */
+    public function setAttemptIdentity($attemptIdentity)
+    {
+        $this->attemptIdentity = $attemptIdentity;
+    }
+
+    /**
+     * Get attemptIdentity
+     *
+     * @return string $attemptIdentity
+     */
+    public function getAttemptIdentity()
+    {
+        return $this->attemptIdentity;
+    }
+
+    /**
+     * Set attemptTimes
+     *
+     * @param integer $attemptTimes
+     */
+    public function setAttemptTimes($attemptTimes)
+    {
+        $this->attemptTimes = $attemptTimes;
+    }
+
+    /**
+     * Get attemptTimes
+     *
+     * @return integer $attemptTimes
+     */
+    public function getAttemptTimes()
+    {
+        return $this->attemptTimes;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer $id
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

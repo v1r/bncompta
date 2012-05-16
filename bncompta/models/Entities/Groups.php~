@@ -1,0 +1,155 @@
+<?php
+
+namespace Entities;
+
+/**
+ * Entities\Groups
+ */
+class Groups
+{
+    /**
+     * @var string $groupName
+     */
+    private $groupName;
+
+    /**
+     * @var string $groupDescription
+     */
+    private $groupDescription;
+
+    /**
+     * @var string $interfacePrefix
+     */
+    private $interfacePrefix;
+
+    /**
+     * @var integer $id
+     */
+    private $id;
+
+    /**
+     * @var Entities\Staffs
+     */
+    private $staffs;
+
+    /**
+     * @var Entities\AclGroupsActions
+     */
+    private $groups_actions;
+
+    public function __construct()
+    {
+        $this->staffs = new \Doctrine\Common\Collections\ArrayCollection();
+    $this->groups_actions = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Set groupName
+     *
+     * @param string $groupName
+     */
+    public function setGroupName($groupName)
+    {
+        $this->groupName = $groupName;
+    }
+
+    /**
+     * Get groupName
+     *
+     * @return string $groupName
+     */
+    public function getGroupName()
+    {
+        return $this->groupName;
+    }
+
+    /**
+     * Set groupDescription
+     *
+     * @param string $groupDescription
+     */
+    public function setGroupDescription($groupDescription)
+    {
+        $this->groupDescription = $groupDescription;
+    }
+
+    /**
+     * Get groupDescription
+     *
+     * @return string $groupDescription
+     */
+    public function getGroupDescription()
+    {
+        return $this->groupDescription;
+    }
+
+    /**
+     * Set interfacePrefix
+     *
+     * @param string $interfacePrefix
+     */
+    public function setInterfacePrefix($interfacePrefix)
+    {
+        $this->interfacePrefix = $interfacePrefix;
+    }
+
+    /**
+     * Get interfacePrefix
+     *
+     * @return string $interfacePrefix
+     */
+    public function getInterfacePrefix()
+    {
+        return $this->interfacePrefix;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer $id
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Add staffs
+     *
+     * @param Entities\Staffs $staffs
+     */
+    public function addStaffs(\Entities\Staffs $staffs)
+    {
+        $this->staffs[] = $staffs;
+    }
+
+    /**
+     * Get staffs
+     *
+     * @return Doctrine\Common\Collections\Collection $staffs
+     */
+    public function getStaffs()
+    {
+        return $this->staffs;
+    }
+
+    /**
+     * Add groups_actions
+     *
+     * @param Entities\AclGroupsActions $groupsActions
+     */
+    public function addGroupsActions(\Entities\AclGroupsActions $groupsActions)
+    {
+        $this->groups_actions[] = $groupsActions;
+    }
+
+    /**
+     * Get groups_actions
+     *
+     * @return Doctrine\Common\Collections\Collection $groupsActions
+     */
+    public function getGroupsActions()
+    {
+        return $this->groups_actions;
+    }
+}

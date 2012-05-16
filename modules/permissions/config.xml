@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module name="permissions">
+    <title>
+        <fr>Permissions</fr>
+    </title>
+    <description>
+        <fr>Configurer les permissions des utilisateurs.</fr>
+    </description>
+    <version>v0.1</version>
+    <menu></menu>
+    <enabled>1</enabled>
+    <is_core>1</is_core> 
+    <has_settings>0</has_settings> 
+    <type>mod_admin</type>
+    <icon_path>img/icons/permissions.png</icon_path>
+</module>

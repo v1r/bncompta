@@ -1,0 +1,231 @@
+<?php
+
+namespace Entities;
+
+/**
+ * Entities\AclActions
+ */
+class AclActions
+{
+    /**
+     * @var string $actionIdentifer
+     */
+    private $actionIdentifer;
+
+    /**
+     * @var string $actionDescription
+     */
+    private $actionDescription;
+
+    /**
+     * @var smallint $role_order
+     */
+    private $role_order;
+
+    /**
+     * @var integer $createdOn
+     */
+    private $createdOn;
+
+    /**
+     * @var integer $id
+     */
+    private $id;
+
+    /**
+     * @var Entities\AclGroupsActions
+     */
+    private $groups_actions;
+
+    /**
+     * @var Entities\AclStudentsPermissions
+     */
+    private $students_actions;
+
+    /**
+     * @var Entities\AclStaffsPermissions
+     */
+    private $staffs_actions;
+
+    /**
+     * @var Entities\AclResources
+     */
+    private $resources;
+
+    public function __construct()
+    {
+        $this->groups_actions = new \Doctrine\Common\Collections\ArrayCollection();
+    $this->students_actions = new \Doctrine\Common\Collections\ArrayCollection();
+    $this->staffs_actions = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Set actionIdentifer
+     *
+     * @param string $actionIdentifer
+     */
+    public function setActionIdentifer($actionIdentifer)
+    {
+        $this->actionIdentifer = $actionIdentifer;
+    }
+
+    /**
+     * Get actionIdentifer
+     *
+     * @return string $actionIdentifer
+     */
+    public function getActionIdentifer()
+    {
+        return $this->actionIdentifer;
+    }
+
+    /**
+     * Set actionDescription
+     *
+     * @param string $actionDescription
+     */
+    public function setActionDescription($actionDescription)
+    {
+        $this->actionDescription = $actionDescription;
+    }
+
+    /**
+     * Get actionDescription
+     *
+     * @return string $actionDescription
+     */
+    public function getActionDescription()
+    {
+        return $this->actionDescription;
+    }
+
+    /**
+     * Set role_order
+     *
+     * @param smallint $roleOrder
+     */
+    public function setRoleOrder($roleOrder)
+    {
+        $this->role_order = $roleOrder;
+    }
+
+    /**
+     * Get role_order
+     *
+     * @return smallint $roleOrder
+     */
+    public function getRoleOrder()
+    {
+        return $this->role_order;
+    }
+
+    /**
+     * Set createdOn
+     *
+     * @param integer $createdOn
+     */
+    public function setCreatedOn($createdOn)
+    {
+        $this->createdOn = $createdOn;
+    }
+
+    /**
+     * Get createdOn
+     *
+     * @return integer $createdOn
+     */
+    public function getCreatedOn()
+    {
+        return $this->createdOn;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer $id
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Add groups_actions
+     *
+     * @param Entities\AclGroupsActions $groupsActions
+     */
+    public function addGroupsActions(\Entities\AclGroupsActions $groupsActions)
+    {
+        $this->groups_actions[] = $groupsActions;
+    }
+
+    /**
+     * Get groups_actions
+     *
+     * @return Doctrine\Common\Collections\Collection $groupsActions
+     */
+    public function getGroupsActions()
+    {
+        return $this->groups_actions;
+    }
+
+    /**
+     * Add students_actions
+     *
+     * @param Entities\AclStudentsPermissions $studentsActions
+     */
+    public function addStudentsActions(\Entities\AclStudentsPermissions $studentsActions)
+    {
+        $this->students_actions[] = $studentsActions;
+    }
+
+    /**
+     * Get students_actions
+     *
+     * @return Doctrine\Common\Collections\Collection $studentsActions
+     */
+    public function getStudentsActions()
+    {
+        return $this->students_actions;
+    }
+
+    /**
+     * Add staffs_actions
+     *
+     * @param Entities\AclStaffsPermissions $staffsActions
+     */
+    public function addStaffsActions(\Entities\AclStaffsPermissions $staffsActions)
+    {
+        $this->staffs_actions[] = $staffsActions;
+    }
+
+    /**
+     * Get staffs_actions
+     *
+     * @return Doctrine\Common\Collections\Collection $staffsActions
+     */
+    public function getStaffsActions()
+    {
+        return $this->staffs_actions;
+    }
+
+    /**
+     * Set resources
+     *
+     * @param Entities\AclResources $resources
+     */
+    public function setResources(\Entities\AclResources $resources)
+    {
+        $this->resources = $resources;
+    }
+
+    /**
+     * Get resources
+     *
+     * @return Entities\AclResources $resources
+     */
+    public function getResources()
+    {
+        return $this->resources;
+    }
+}

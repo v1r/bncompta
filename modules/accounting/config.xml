@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module name="accounting">
+    <title>
+        <fr>Comptabilité</fr>
+    </title>
+    <description>
+        <fr>Gestion des dépenses, recettes ...</fr>
+    </description>
+    <version>v0.1</version>
+    <menu>accounting</menu>
+    <enabled>1</enabled>
+    <is_core>1</is_core> 	
+    <type>mod_entreprise</type>
+    <icon_path>img/icons/accounting.png</icon_path>
+    <lang_file_name>accounting</lang_file_name>
+</module>

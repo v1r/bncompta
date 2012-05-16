@@ -5,4 +5,12 @@ PLEASE NOTE :
 BNCOMPTA is under heavy development, a lot of efforts is being made to rewrite the entire code of the old version. 
 
 
- 
+ @todo 
+
+- Integrating  Doctrine [Done] 
+- Doctrine db Mapping [Done] see bncompta/models/mapping 
+- Integrating Backbone  [0%] 
+- Getting rid of active record queries, we go with doctrine [30%] 
+- Implementing a powerfull ACL system [80%]  
+
+And more things to do...

@@ -25,16 +25,14 @@ class cpEnterprisesController extends CP_Controller {
     public function index() {
 
         $enterprises = $this->doctrine->em->getRepository('Entities\Enterprises')->findALL();
-        dump($enterprises);
-        //$this->template->build('tpl/entreprise_list', $this->data);
+     
+     $this->template->build('tpl/entreprise_list', $this->data);
     }
 
     public function addAction() {
 
 
         if (post_request("submit")) {
-
-
             $enterprise = new Entities\Enterprises;
             $eProfile = new Entities\EnterprisesProfiles;
             $aclEnterprise = new Entities\AclEnterprisesPermissions;

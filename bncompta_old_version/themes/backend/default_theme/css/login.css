@@ -1,0 +1,140 @@
+@import 'css3.css';
+ 
+* {
+    margin:0; padding:0;
+}
+
+body {
+    position:relative;
+    height:100%;
+    background:#fff url('../img/loginbg.png') left top repeat-x;
+    font-family:Tahoma, Arial, sans-serif;
+}
+
+h2 {
+    font-size: 23px;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 12px;
+    line-height: 25px;
+    margin-bottom: 5px;
+}
+img {
+    border:0;
+}
+
+#container {
+    width:880px;
+    margin:0 auto;
+}
+
+#container .logo_big {
+    margin: 109px 0 139px 256px;
+    width: 500px;
+}
+#container .notices {
+    float:left;
+    margin:0px auto;
+    margin-top:44px;
+}
+
+#container #box {
+    clear: both;
+    float: none;
+    margin: 10px auto 0;
+    width: 97%;
+}
+
+p.main label {
+    float:left;
+    padding:5px;
+    display:inline;
+    margin-left:40px;
+    font-size:13px;
+    color:#000;
+    margin-right:10px;
+}
+
+#box p {
+    clear:both;
+    float:none;
+    width:100%;
+}
+
+p.main INPUT {
+    background:url('../img/input.png') 0 0 repeat-x;
+    border:1px solid #d3d3d3;
+    color:#555;
+    padding:5px;
+    float:left;
+    width:200px;
+    font-size: 2em;
+}
+
+input.login {
+    background: url("../img/rep1.png") repeat-x scroll 50% 50% transparent;
+    border: 1px solid #555555;
+    color: #FFFFFF;
+    display: inline;
+    float: right;
+    font-size: 17px;
+    margin-right: 0;
+    margin-top: -53px;
+    padding: 6px;
+    text-decoration: none;
+}
+
+span {
+    font-size:13px;
+    color:#666;
+}
+
+.space {
+    margin-left: 40px;
+}
+
+span input {
+    margin-left:125px;
+    margin-right:5px;
+    border:1px solid #111;
+    background:#444;
+    color:#fff;
+}
+
+.error_small {
+    background: none repeat scroll 0 0 #FCD2D2;
+    border: 1px solid #C44509;
+    float: left;
+    width:700px;
+    margin-left:120px;
+}
+
+.message_small {
+    display:block;
+    padding:5px 20px;
+    margin-bottom:15px;
+    /* un peu du css 3 */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.success_small {
+    background: none repeat scroll 0 0 #d4f684;
+    border:1px solid #739f1d;
+    float: left;
+    margin: 10px 230px 30px;
+    width:700px;
+    margin-left:120px;
+
+}
+.top_warning {
+    background: none repeat scroll 0 0 #ED0606;
+    border: 1px dotted #000000;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 3px;
+    position: relative;
+    width: 300px;
+}

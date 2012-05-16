@@ -1,0 +1,570 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Bncompta_auth_model</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/BNCOMPTA.html"><i class="icon-folder-open"></i> BNCOMPTA</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">1</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">10</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#add_manager" title="add_manager :: This function creates a manager account"><span class="description">This function creates a manager account</span><pre>add_manager()</pre></a></li>
+<li class="method public "><a href="#add_user" title="add_user :: This function creates a new user account"><span class="description">This function creates a new user account</span><pre>add_user()</pre></a></li>
+<li class="method public "><a href="#authentificate" title="authentificate :: This function  invoke the authentification process returns true if the authentification succeed"><span class="description">This function  invoke the authentification process returns true if the authentification succeed</span><pre>authentificate()</pre></a></li>
+<li class="method public "><a href="#get_all_managers" title="get_all_managers :: This function returns and filter all availables managers"><span class="description">This function returns and filter all availables managers</span><pre>get_all_managers()</pre></a></li>
+<li class="method public "><a href="#get_all_users" title="get_all_users :: This function return all availables users of an enterprise"><span class="description">This function return all availables users of an enterprise</span><pre>get_all_users()</pre></a></li>
+<li class="method public "><a href="#get_last_login_time" title="get_last_login_time :: This function returns the last login time of a specified user"><span class="description">This function returns the last login time of a specified user</span><pre>get_last_login_time()</pre></a></li>
+<li class="method public "><a href="#get_user_data" title="get_user_data :: This function returns user data"><span class="description">This function returns user data</span><pre>get_user_data()</pre></a></li>
+<li class="method public "><a href="#get_user_id" title="get_user_id :: Get user id by email|username"><span class="description">Get user id by email|username</span><pre>get_user_id()</pre></a></li>
+<li class="method public "><a href="#login_exist" title="login_exist :: We check if the user login exist or not"><span class="description">We check if the user login exist or not</span><pre>login_exist()</pre></a></li>
+<li class="method public "><a href="#restore_ghost_permission_data" title="restore_ghost_permission_data :: This function restores the user session vars"><span class="description">This function restores the user session vars</span><pre>restore_ghost_permission_data()</pre></a></li>
+<li class="method public "><a href="#restore_permission" title="restore_permission :: This function restores the permission of a user after using the ghost permission mode"><span class="description">This function restores the permission of a user after using the ghost permission mode</span><pre>restore_permission()</pre></a></li>
+<li class="method public "><a href="#set_ghost_permission_data" title="set_ghost_permission_data :: This function sets the new session data for the ghost permission mode"><span class="description">This function sets the new session data for the ghost permission mode</span><pre>set_ghost_permission_data()</pre></a></li>
+<li class="method public "><a href="#set_last_login_time" title="set_last_login_time :: This functions sets and update the last login time of a user"><span class="description">This functions sets and update the last login time of a user</span><pre>set_last_login_time()</pre></a></li>
+<li class="method public "><a href="#switch_permission" title="switch_permission :: This function allow the administrator to switch and view user account permissions"><span class="description">This function allow the administrator to switch and view user account permissions</span><pre>switch_permission()</pre></a></li>
+<li class="method public "><a href="#unset_user_data" title="unset_user_data :: This function unsets the user session data of the user"><span class="description">This function unsets the user session data of the user</span><pre>unset_user_data()</pre></a></li>
+<li class="method public "><a href="#update_user" title="update_user :: This function update the user account information"><span class="description">This function update the user account information</span><pre>update_user()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#set_user_data" title="set_user_data :: This function sets the user session data of the user"><span class="description">This function sets the user session data of the user</span><pre>set_user_data()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private "><a href="#check_password" title="check_password :: We check if the password match"><span class="description">We check if the password match</span><pre>check_password()</pre></a></li>
+<li class="method private "><a href="#try_auth" title="try_auth :: Try to authentificate user and set his session data"><span class="description">Try to authentificate user and set his session data</span><pre>try_auth()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header private">» Private</li>
+<li class="property private "><a href="#%24entreprises_table" title="$entreprises_table :: Enterprises Table"><span class="description">Enterprises Table</span><pre>$entreprises_table</pre></a></li>
+<li class="property private "><a href="#%24users_profiles_table" title="$users_profiles_table :: Users Profiles table"><span class="description">Users Profiles table</span><pre>$users_profiles_table</pre></a></li>
+<li class="property private "><a href="#%24users_rel_table" title="$users_rel_table :: User and enterprises relation table"><span class="description">User and enterprises relation table</span><pre>$users_rel_table</pre></a></li>
+<li class="property private "><a href="#%24users_roles_table" title="$users_roles_table :: Roles table"><span class="description">Roles table</span><pre>$users_roles_table</pre></a></li>
+<li class="property private "><a href="#%24users_table" title="$users_table :: Users table"><span class="description">Users table</span><pre>$users_table</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CBncompta_auth_model" id="\Bncompta_auth_model"></a><div href="../classes/Bncompta_auth_model.html" class="element class">
+<p class="short_description">Bncompta authentification model</p>
+<div class="details">
+<p class="long_description"><p>This class is used by the bncompta auth library</p></p>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="..//packages/BNCOMPTA.Security.Auth.Model.html">BNCOMPTA</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Security\Auth\Model</td>
+</tr>
+<tr>
+<th>Category</th>
+<td>Core Modules</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Karim Besbes</a></td>
+</tr>
+<tr>
+<th>version</th>
+<td>v0.2</td>
+</tr>
+<tr>
+<th>name</th>
+<td>BNCOMPTA Authentification Model</td>
+</tr>
+<tr>
+<th>todo</th>
+<td>load tables vars from config file</td>
+</tr>
+<tr>
+<th>todo</th>
+<td>Add captcha support ( Recaptcha )</td>
+</tr>
+<tr>
+<th>todo</th>
+<td>Remember me function</td>
+</tr>
+<tr>
+<th>todo</th>
+<td>forgot password function</td>
+</tr>
+<tr>
+<th>todo</th>
+<td>fix the library and clean up the code</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="add_manager" id="add_manager"></a><div class="element clickable method public add_manager" data-toggle="collapse" data-target=".add_manager .collapse">
+<h2>This function creates a manager account</h2>
+<pre>add_manager(string $username, string $password, string $email, array $user_data) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$username</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$email</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$user_data</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="add_user" id="add_user"></a><div class="element clickable method public add_user" data-toggle="collapse" data-target=".add_user .collapse">
+<h2>This function creates a new user account</h2>
+<pre>add_user(string $username, string $password, string $email, array $user_data, array $rules) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$username</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$email</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$user_data</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$rules</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="authentificate" id="authentificate"></a><div class="element clickable method public authentificate" data-toggle="collapse" data-target=".authentificate .collapse">
+<h2>This function  invoke the authentification process returns true if the authentification succeed</h2>
+<pre>authentificate(int $user_id, string $password) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="get_all_managers" id="get_all_managers"></a><div class="element clickable method public get_all_managers" data-toggle="collapse" data-target=".get_all_managers .collapse">
+<h2>This function returns and filter all availables managers</h2>
+<pre>get_all_managers(array $filter) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filter</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>of objects</div>
+</div></div>
+</div>
+<a name="get_all_users" id="get_all_users"></a><div class="element clickable method public get_all_users" data-toggle="collapse" data-target=".get_all_users .collapse">
+<h2>This function return all availables users of an enterprise</h2>
+<pre>get_all_users(int $entreprise_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$entreprise_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>of objects</div>
+</div></div>
+</div>
+<a name="get_last_login_time" id="get_last_login_time"></a><div class="element clickable method public get_last_login_time" data-toggle="collapse" data-target=".get_last_login_time .collapse">
+<h2>This function returns the last login time of a specified user</h2>
+<pre>get_last_login_time($user_id) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="get_user_data" id="get_user_data"></a><div class="element clickable method public get_user_data" data-toggle="collapse" data-target=".get_user_data .collapse">
+<h2>This function returns user data</h2>
+<pre>get_user_data(int $user_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>of objects</div>
+</div></div>
+</div>
+<a name="get_user_id" id="get_user_id"></a><div class="element clickable method public get_user_id" data-toggle="collapse" data-target=".get_user_id .collapse">
+<h2>Get user id by email|username</h2>
+<pre>get_user_id(string $login) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$login</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="login_exist" id="login_exist"></a><div class="element clickable method public login_exist" data-toggle="collapse" data-target=".login_exist .collapse">
+<h2>We check if the user login exist or not</h2>
+<pre>login_exist(string $login) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$login</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="restore_ghost_permission_data" id="restore_ghost_permission_data"></a><div class="element clickable method public restore_ghost_permission_data" data-toggle="collapse" data-target=".restore_ghost_permission_data .collapse">
+<h2>This function restores the user session vars</h2>
+<pre>restore_ghost_permission_data(array $data, int $last_login) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$last_login</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="restore_permission" id="restore_permission"></a><div class="element clickable method public restore_permission" data-toggle="collapse" data-target=".restore_permission .collapse">
+<h2>This function restores the permission of a user after using the ghost permission mode</h2>
+<pre>restore_permission(int $to_user_id) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$to_user_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="set_ghost_permission_data" id="set_ghost_permission_data"></a><div class="element clickable method public set_ghost_permission_data" data-toggle="collapse" data-target=".set_ghost_permission_data .collapse">
+<h2>This function sets the new session data for the ghost permission mode</h2>
+<pre>set_ghost_permission_data(array $data, int $last_login, int $from_user_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$last_login</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$from_user_id</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="set_last_login_time" id="set_last_login_time"></a><div class="element clickable method public set_last_login_time" data-toggle="collapse" data-target=".set_last_login_time .collapse">
+<h2>This functions sets and update the last login time of a user</h2>
+<pre>set_last_login_time(int $user_id) : \type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\type</code></div>
+</div></div>
+</div>
+<a name="switch_permission" id="switch_permission"></a><div class="element clickable method public switch_permission" data-toggle="collapse" data-target=".switch_permission .collapse">
+<h2>This function allow the administrator to switch and view user account permissions</h2>
+<pre>switch_permission(int $from_user_id, int $to_user_id) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$from_user_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$to_user_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="unset_user_data" id="unset_user_data"></a><div class="element clickable method public unset_user_data" data-toggle="collapse" data-target=".unset_user_data .collapse">
+<h2>This function unsets the user session data of the user</h2>
+<pre>unset_user_data(array $data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a name="update_user" id="update_user"></a><div class="element clickable method public update_user" data-toggle="collapse" data-target=".update_user .collapse">
+<h2>This function update the user account information</h2>
+<pre>update_user(int $user_id, string $username, string $password, string $email, array $user_data, array $rules) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$username</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$email</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$user_data</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$rules</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="set_user_data" id="set_user_data"></a><div class="element clickable method protected set_user_data" data-toggle="collapse" data-target=".set_user_data .collapse">
+<h2>This function sets the user session data of the user</h2>
+<pre>set_user_data(array $data, int $last_login) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$last_login</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="check_password" id="check_password"></a><div class="element clickable method private check_password" data-toggle="collapse" data-target=".check_password .collapse">
+<h2>We check if the password match</h2>
+<pre>check_password(string $password, string $given_password) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$given_password</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="try_auth" id="try_auth"></a><div class="element clickable method private try_auth" data-toggle="collapse" data-target=".try_auth .collapse">
+<h2>Try to authentificate user and set his session data</h2>
+<pre>try_auth(int $user_id, string $password) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24entreprises_table" id="$entreprises_table"> </a><div class="element clickable property private $entreprises_table" data-toggle="collapse" data-target=".$entreprises_table .collapse">
+<h2>Enterprises Table</h2>
+<pre>$entreprises_table : \type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24users_profiles_table" id="$users_profiles_table"> </a><div class="element clickable property private $users_profiles_table" data-toggle="collapse" data-target=".$users_profiles_table .collapse">
+<h2>Users Profiles table</h2>
+<pre>$users_profiles_table : \type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24users_rel_table" id="$users_rel_table"> </a><div class="element clickable property private $users_rel_table" data-toggle="collapse" data-target=".$users_rel_table .collapse">
+<h2>User and enterprises relation table</h2>
+<pre>$users_rel_table : \type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24users_roles_table" id="$users_roles_table"> </a><div class="element clickable property private $users_roles_table" data-toggle="collapse" data-target=".$users_roles_table .collapse">
+<h2>Roles table</h2>
+<pre>$users_roles_table : \type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24users_table" id="$users_table"> </a><div class="element clickable property private $users_table" data-toggle="collapse" data-target=".$users_table .collapse">
+<h2>Users table</h2>
+<pre>$users_table : \type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a2</a> and<br>
+            generated on 2012-05-07T12:19:22-03:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -26,6 +26,7 @@ class Core {
      * 
      */
     public $auth;
+    public $acl;
 
     function __construct() {
 
@@ -65,19 +66,23 @@ class Core {
         $this->fetch_method = strtolower($this->bncompta->router->fetch_method());
         $this->fetch_module_class = strtolower($this->fetch_module . '/' . $this->fetch_class);
         $this->fetch_module_class_method = strtolower($this->fetch_module . '/' . $this->fetch_class . '/' . $this->fetch_method);
-
-
-        // Load active record lib
+ 
         $this->bncompta->load->database();
 
         $this->bncompta->load->library(array('session', 'template', 'parser', 'form_validation', 'settings/setting'));
 
-        // Load permission model
+        $this->bncompta->lang->load('core');
+ 
         $this->bncompta->load->model('permissions/permission_model');
-        $this->bncompta->load->model('modules/mods_model');
-        // Load the Auth library    
+         
+        
         $this->auth = $this->bncompta->load->library('security/bncompta_auth');
-        $this->acl = $this->bncompta->load->library('security/acl');
+
+        $userAcl = $this->bncompta->session->userdata("acl");
+   
+        $this->acl = $this->bncompta->load->library('security/acl', $userAcl);
+
+        $this->moduleforge = $this->bncompta->load->library('modules/ModuleForge');
     }
 
 }

@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a2" title="">
+  <file path="bncompta_auth_model.php" hash="7cba57e51d7884e9f950c3da16ac418c" package="BNCOMPTA\Security\Auth\Model">
+    <docblock line="3">
+      <description><![CDATA[Bncompta authentification model]]></description>
+      <long-description><![CDATA[<p>This class is used by the bncompta auth library</p>]]></long-description>
+      <tag line="3" name="package" description="BNCOMPTA"/>
+      <tag line="3" name="subpackage" description="Security\Auth\Model"/>
+      <tag line="3" name="Category" description="Core Modules"/>
+      <tag line="3" name="author" description="Karim Besbes"/>
+      <tag line="3" name="version" description="v0.2"/>
+      <tag line="3" name="name" description="BNCOMPTA Authentification Model"/>
+      <tag line="3" name="todo" description="load tables vars from config file"/>
+      <tag line="3" name="todo" description="Add captcha support ( Recaptcha )"/>
+      <tag line="3" name="todo" description="Remember me function"/>
+      <tag line="3" name="todo" description="forgot password function"/>
+      <tag line="3" name="todo" description="fix the library and clean up the code"/>
+    </docblock>
+    <parse_markers>
+      <notice line="357" code="50017">The type for the @return tag in set_last_login_time() is "type"; isn't this an IDE default?</notice>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="default" line="24" package="BNCOMPTA\Security\Auth\Model">
+      <name>Bncompta_auth_model</name>
+      <full_name>\Bncompta_auth_model</full_name>
+      <extends>\CI_Model</extends>
+      <docblock line="3">
+        <description><![CDATA[Bncompta authentification model]]></description>
+        <long-description><![CDATA[<p>This class is used by the bncompta auth library</p>]]></long-description>
+        <tag line="3" name="package" description="BNCOMPTA"/>
+        <tag line="3" name="subpackage" description="Security\Auth\Model"/>
+        <tag line="3" name="Category" description="Core Modules"/>
+        <tag line="3" name="author" description="Karim Besbes"/>
+        <tag line="3" name="version" description="v0.2"/>
+        <tag line="3" name="name" description="BNCOMPTA Authentification Model"/>
+        <tag line="3" name="todo" description="load tables vars from config file"/>
+        <tag line="3" name="todo" description="Add captcha support ( Recaptcha )"/>
+        <tag line="3" name="todo" description="Remember me function"/>
+        <tag line="3" name="todo" description="forgot password function"/>
+        <tag line="3" name="todo" description="fix the library and clean up the code"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="31" package="Default">
+        <name>$users_table</name>
+        <default><![CDATA['users']]></default>
+        <docblock line="26">
+          <description><![CDATA[Users table]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="26" name="access" description="private"/>
+          <tag line="26" name="var" description="" type="\type">
+            <type by_reference="false">\type</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="37" package="Default">
+        <name>$users_rel_table</name>
+        <default><![CDATA['user_entreprise_rel']]></default>
+        <docblock line="33">
+          <description><![CDATA[User and enterprises relation table]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="33" name="var" description="" type="\type">
+            <type by_reference="false">\type</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="44" package="Default">
+        <name>$users_roles_table</name>
+        <default><![CDATA['roles']]></default>
+        <docblock line="39">
+          <description><![CDATA[Roles table]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="39" name="access" description="private"/>
+          <tag line="39" name="var" description="" type="\type">
+            <type by_reference="false">\type</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="51" package="Default">
+        <name>$users_profiles_table</name>
+        <default><![CDATA['users_profiles']]></default>
+        <docblock line="46">
+          <description><![CDATA[Users Profiles table]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="46" name="access" description="private"/>
+          <tag line="46" name="var" description="" type="\type">
+            <type by_reference="false">\type</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="58" package="Default">
+        <name>$entreprises_table</name>
+        <default><![CDATA['entreprises']]></default>
+        <docblock line="53">
+          <description><![CDATA[Enterprises Table]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="53" name="access" description="private"/>
+          <tag line="53" name="var" description="" type="\type">
+            <type by_reference="false">\type</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="70" package="">
+        <name>add_user</name>
+        <type>function</type>
+        <docblock line="60">
+          <description><![CDATA[This function creates a new user account]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="60" name="param" description="" type="string" variable="$username">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="60" name="param" description="" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="60" name="param" description="" type="string" variable="$email">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="60" name="param" description="" type="array" variable="$user_data">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="60" name="param" description="" type="array" variable="$rules">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="60" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="70">
+          <name>$username</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="70">
+          <name>$password</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="70">
+          <name>$email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="70">
+          <name>$user_data</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="70">
+          <name>$rules</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="137" package="">
+        <name>update_user</name>
+        <type>function</type>
+        <docblock line="127">
+          <description><![CDATA[This function update the user account information]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="127" name="param" description="" type="int" variable="$user_id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="127" name="param" description="" type="string" variable="$username">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="127" name="param" description="" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="127" name="param" description="" type="string" variable="$email">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="127" name="param" description="" type="array" variable="$user_data">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="127" name="param" description="" type="array" variable="$rules">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="127" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="137">
+          <name>$user_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="137">
+          <name>$username</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="137">
+          <name>$password</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="137">
+          <name>$email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="137">
+          <name>$user_data</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="137">
+          <name>$rules</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="199" package="">
+        <name>add_manager</name>
+        <type>function</type>
+        <docblock line="191">
+          <description><![CDATA[This function creates a manager account]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="191" name="param" description="" type="string" variable="$username">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="191" name="param" description="" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="191" name="param" description="" type="string" variable="$email">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="191" name="param" description="" type="array" variable="$user_data">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="191" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="199">
+          <name>$username</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="199">
+          <name>$password</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="199">
+          <name>$email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="199">
+          <name>$user_data</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="242" package="">
+        <name>get_all_managers</name>
+        <type>function</type>
+        <docblock line="237">
+          <description><![CDATA[This function returns and filter all availables managers]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="237" name="param" description="" type="array" variable="$filter">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="237" name="return" description="of objects" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="242">
+          <name>$filter</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="266" package="">
+        <name>get_all_users</name>
+        <type>function</type>
+        <docblock line="260">
+          <description><![CDATA[This function return all availables users of an enterprise]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="260" name="param" description="" type="int" variable="$entreprise_id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="260" name="return" description="of objects" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="266">
+          <name>$entreprise_id</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="286" package="">
+        <name>login_exist</name>
+        <type>function</type>
+        <docblock line="281">
+          <description><![CDATA[We check if the user login exist or not]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="281" name="param" description="" type="string" variable="$login">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="281" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="286">
+          <name>$login</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="311" package="">
+        <name>get_user_id</name>
+        <type>function</type>
+        <docblock line="306">
+          <description><![CDATA[Get user id by email|username]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="306" name="param" description="" type="string" variable="$login">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="306" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="311">
+          <name>$login</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="default" line="330" package="">
+        <name>try_auth</name>
+        <type>function</type>
+        <docblock line="324">
+          <description><![CDATA[Try to authentificate user and set his session data]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="324" name="param" description="" type="int" variable="$user_id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="324" name="param" description="" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="324" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="330">
+          <name>$user_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="330">
+          <name>$password</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="349" package="">
+        <name>get_last_login_time</name>
+        <type>function</type>
+        <docblock line="344">
+          <description><![CDATA[This function returns the last login time of a specified user]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="344" name="param" description="" type="" variable="$user_id"/>
+          <tag line="344" name="return" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="349">
+          <name>$user_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="362" package="">
+        <name>set_last_login_time</name>
+        <type>function</type>
+        <docblock line="357">
+          <description><![CDATA[This functions sets and update the last login time of a user]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="357" name="param" description="" type="int" variable="$user_id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="357" name="return" description="" type="\type">
+            <type by_reference="false">\type</type>
+          </tag>
+        </docblock>
+        <argument line="362">
+          <name>$user_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="377" package="">
+        <name>authentificate</name>
+        <type>function</type>
+        <docblock line="371">
+          <description><![CDATA[This function  invoke the authentification process returns true if the authentification succeed]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="371" name="param" description="" type="int" variable="$user_id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="371" name="param" description="" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="371" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="377">
+          <name>$user_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="377">
+          <name>$password</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="default" line="395" package="">
+        <name>check_password</name>
+        <type>function</type>
+        <docblock line="389">
+          <description><![CDATA[We check if the password match]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="389" name="param" description="" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="389" name="param" description="" type="string" variable="$given_password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="389" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="395">
+          <name>$password</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="395">
+          <name>$given_password</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="408" package="">
+        <name>get_user_data</name>
+        <type>function</type>
+        <docblock line="403">
+          <description><![CDATA[This function returns user data]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="403" name="param" description="" type="int" variable="$user_id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="403" name="return" description="of objects" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="408">
+          <name>$user_id</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="default" line="433" package="">
+        <name>set_user_data</name>
+        <type>function</type>
+        <docblock line="428">
+          <description><![CDATA[This function sets the user session data of the user]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="428" name="param" description="" type="array" variable="$data">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="428" name="param" description="" type="int" variable="$last_login">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="433">
+          <name>$data</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+        <argument line="433">
+          <name>$last_login</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="449" package="">
+        <name>unset_user_data</name>
+        <type>function</type>
+        <docblock line="445">
+          <description><![CDATA[This function unsets the user session data of the user]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="445" name="param" description="" type="array" variable="$data">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="449">
+          <name>$data</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="466" package="">
+        <name>switch_permission</name>
+        <type>function</type>
+        <docblock line="460">
+          <description><![CDATA[This function allow the administrator to switch and view user account permissions]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="460" name="param" description="" type="int" variable="$from_user_id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="460" name="param" description="" type="int" variable="$to_user_id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="460" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="466">
+          <name>$from_user_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="466">
+          <name>$to_user_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="481" package="">
+        <name>set_ghost_permission_data</name>
+        <type>function</type>
+        <docblock line="475">
+          <description><![CDATA[This function sets the new session data for the ghost permission mode]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="475" name="param" description="" type="array" variable="$data">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="475" name="param" description="" type="int" variable="$last_login">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="475" name="param" description="" type="int" variable="$from_user_id">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="481">
+          <name>$data</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+        <argument line="481">
+          <name>$last_login</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="481">
+          <name>$from_user_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="497" package="">
+        <name>restore_permission</name>
+        <type>function</type>
+        <docblock line="492">
+          <description><![CDATA[This function restores the permission of a user after using the ghost permission mode]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="492" name="param" description="" type="int" variable="$to_user_id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="492" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="497">
+          <name>$to_user_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="510" package="">
+        <name>restore_ghost_permission_data</name>
+        <type>function</type>
+        <docblock line="505">
+          <description><![CDATA[This function restores the user session vars]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="505" name="param" description="" type="array" variable="$data">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="505" name="param" description="" type="int" variable="$last_login">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="510">
+          <name>$data</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+        <argument line="510">
+          <name>$last_login</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <package name="" full_name=""/>
+  <package name="BNCOMPTA" full_name="BNCOMPTA">
+    <package name="Security" full_name="BNCOMPTA\Security">
+      <package name="Auth" full_name="BNCOMPTA\Security\Auth">
+        <package name="Model" full_name="BNCOMPTA\Security\Auth\Model"/>
+      </package>
+    </package>
+  </package>
+  <package name="Default" full_name="Default"/>
+  <namespace name="default" full_name="default"/>
+  <marker count="10">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>

@@ -1,0 +1,356 @@
+<?php
+
+namespace Entities;
+
+/**
+ * Entities\Enterprises
+ */
+class Enterprises
+{
+    /**
+     * @var string $enterpriseLabel
+     */
+    private $enterpriseLabel;
+
+    /**
+     * @var smallint $enterpriseIsAga
+     */
+    private $enterpriseIsAga;
+
+    /**
+     * @var integer $createdOn
+     */
+    private $createdOn;
+
+    /**
+     * @var integer $id
+     */
+    private $id;
+
+    /**
+     * @var Entities\EnterprisesProfiles
+     */
+    private $profile;
+
+    /**
+     * @var Entities\EnterprisesProfiles
+     */
+    private $enterprise;
+
+    /**
+     * @var Entities\EnterprisesAccountingYear
+     */
+    private $enterprises_accounting_year;
+
+    /**
+     * @var Entities\EnterprisesBankAccounts
+     */
+    private $enterprises_bank_account;
+
+    /**
+     * @var Entities\Users
+     */
+    private $user;
+
+    public function __construct()
+    {
+        $this->enterprise = new \Doctrine\Common\Collections\ArrayCollection();
+    $this->enterprises_accounting_year = new \Doctrine\Common\Collections\ArrayCollection();
+    $this->enterprises_bank_account = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Set enterpriseLabel
+     *
+     * @param string $enterpriseLabel
+     */
+    public function setEnterpriseLabel($enterpriseLabel)
+    {
+        $this->enterpriseLabel = $enterpriseLabel;
+    }
+
+    /**
+     * Get enterpriseLabel
+     *
+     * @return string $enterpriseLabel
+     */
+    public function getEnterpriseLabel()
+    {
+        return $this->enterpriseLabel;
+    }
+
+    /**
+     * Set enterpriseIsAga
+     *
+     * @param smallint $enterpriseIsAga
+     */
+    public function setEnterpriseIsAga($enterpriseIsAga)
+    {
+        $this->enterpriseIsAga = $enterpriseIsAga;
+    }
+
+    /**
+     * Get enterpriseIsAga
+     *
+     * @return smallint $enterpriseIsAga
+     */
+    public function getEnterpriseIsAga()
+    {
+        return $this->enterpriseIsAga;
+    }
+
+    /**
+     * Set createdOn
+     *
+     * @param integer $createdOn
+     */
+    public function setCreatedOn($createdOn)
+    {
+        $this->createdOn = $createdOn;
+    }
+
+    /**
+     * Get createdOn
+     *
+     * @return integer $createdOn
+     */
+    public function getCreatedOn()
+    {
+        return $this->createdOn;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer $id
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set profile
+     *
+     * @param Entities\EnterprisesProfiles $profile
+     */
+    public function setProfile(\Entities\EnterprisesProfiles $profile)
+    {
+        $this->profile = $profile;
+    }
+
+    /**
+     * Get profile
+     *
+     * @return Entities\EnterprisesProfiles $profile
+     */
+    public function getProfile()
+    {
+        return $this->profile;
+    }
+
+    /**
+     * Add enterprise
+     *
+     * @param Entities\EnterprisesProfiles $enterprise
+     */
+    public function addEnterprise(\Entities\EnterprisesProfiles $enterprise)
+    {
+        $this->enterprise[] = $enterprise;
+    }
+
+    /**
+     * Get enterprise
+     *
+     * @return Doctrine\Common\Collections\Collection $enterprise
+     */
+    public function getEnterprise()
+    {
+        return $this->enterprise;
+    }
+
+    /**
+     * Add enterprises_accounting_year
+     *
+     * @param Entities\EnterprisesAccountingYear $enterprisesAccountingYear
+     */
+    public function addEnterprisesAccountingYear(\Entities\EnterprisesAccountingYear $enterprisesAccountingYear)
+    {
+        $this->enterprises_accounting_year[] = $enterprisesAccountingYear;
+    }
+
+    /**
+     * Get enterprises_accounting_year
+     *
+     * @return Doctrine\Common\Collections\Collection $enterprisesAccountingYear
+     */
+    public function getEnterprisesAccountingYear()
+    {
+        return $this->enterprises_accounting_year;
+    }
+
+    /**
+     * Add enterprises_bank_account
+     *
+     * @param Entities\EnterprisesBankAccounts $enterprisesBankAccount
+     */
+    public function addEnterprisesBankAccount(\Entities\EnterprisesBankAccounts $enterprisesBankAccount)
+    {
+        $this->enterprises_bank_account[] = $enterprisesBankAccount;
+    }
+
+    /**
+     * Get enterprises_bank_account
+     *
+     * @return Doctrine\Common\Collections\Collection $enterprisesBankAccount
+     */
+    public function getEnterprisesBankAccount()
+    {
+        return $this->enterprises_bank_account;
+    }
+
+    /**
+     * Set user
+     *
+     * @param Entities\Users $user
+     */
+    public function setUser(\Entities\Users $user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * Get user
+     *
+     * @return Entities\Users $user
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+    /**
+     * @var Entities\EnterprisesBankStatements
+     */
+    private $enterprises_bank_statements;
+
+    /**
+     * @var Entities\EnterprisesBankAccounts
+     */
+    private $enterprises_bank_accounts;
+
+    /**
+     * @var Entities\EnterprisesModules
+     */
+    private $enterprises_modules;
+
+    /**
+     * @var Entities\EntreprisesIncomes
+     */
+    private $enterprises_income;
+
+
+    /**
+     * Add enterprises_bank_statements
+     *
+     * @param Entities\EnterprisesBankStatements $enterprisesBankStatements
+     */
+    public function addEnterprisesBankStatements(\Entities\EnterprisesBankStatements $enterprisesBankStatements)
+    {
+        $this->enterprises_bank_statements[] = $enterprisesBankStatements;
+    }
+
+    /**
+     * Get enterprises_bank_statements
+     *
+     * @return Doctrine\Common\Collections\Collection $enterprisesBankStatements
+     */
+    public function getEnterprisesBankStatements()
+    {
+        return $this->enterprises_bank_statements;
+    }
+
+    /**
+     * Add enterprises_bank_accounts
+     *
+     * @param Entities\EnterprisesBankAccounts $enterprisesBankAccounts
+     */
+    public function addEnterprisesBankAccounts(\Entities\EnterprisesBankAccounts $enterprisesBankAccounts)
+    {
+        $this->enterprises_bank_accounts[] = $enterprisesBankAccounts;
+    }
+
+    /**
+     * Get enterprises_bank_accounts
+     *
+     * @return Doctrine\Common\Collections\Collection $enterprisesBankAccounts
+     */
+    public function getEnterprisesBankAccounts()
+    {
+        return $this->enterprises_bank_accounts;
+    }
+
+    /**
+     * Add enterprises_modules
+     *
+     * @param Entities\EnterprisesModules $enterprisesModules
+     */
+    public function addEnterprisesModules(\Entities\EnterprisesModules $enterprisesModules)
+    {
+        $this->enterprises_modules[] = $enterprisesModules;
+    }
+
+    /**
+     * Get enterprises_modules
+     *
+     * @return Doctrine\Common\Collections\Collection $enterprisesModules
+     */
+    public function getEnterprisesModules()
+    {
+        return $this->enterprises_modules;
+    }
+
+    /**
+     * Add enterprises_income
+     *
+     * @param Entities\EntreprisesIncomes $enterprisesIncome
+     */
+    public function addEnterprisesIncome(\Entities\EntreprisesIncomes $enterprisesIncome)
+    {
+        $this->enterprises_income[] = $enterprisesIncome;
+    }
+
+    /**
+     * Get enterprises_income
+     *
+     * @return Doctrine\Common\Collections\Collection $enterprisesIncome
+     */
+    public function getEnterprisesIncome()
+    {
+        return $this->enterprises_income;
+    }
+    /**
+     * @var Entities\EnterprisesProfiles
+     */
+    private $enterpriseProfile;
+
+
+    /**
+     * Add enterpriseProfile
+     *
+     * @param Entities\EnterprisesProfiles $enterpriseProfile
+     */
+    public function addEnterpriseProfile(\Entities\EnterprisesProfiles $enterpriseProfile)
+    {
+        $this->enterpriseProfile[] = $enterpriseProfile;
+    }
+
+    /**
+     * Get enterpriseProfile
+     *
+     * @return Doctrine\Common\Collections\Collection $enterpriseProfile
+     */
+    public function getEnterpriseProfile()
+    {
+        return $this->enterpriseProfile;
+    }
+}

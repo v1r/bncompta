@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module name="dashboard">
+    <title>core.dashboard_module_title</title>
+    <description>core.dashboard_module_description</description>
+    <version>v0.1</version>
+    <enabled>1</enabled>
+    <is_core>1</is_core> 	
+    <icon_path>none</icon_path>
+    <position>0</position>
+    <resource_access_level>
+    </resource_access_level>
+</module>

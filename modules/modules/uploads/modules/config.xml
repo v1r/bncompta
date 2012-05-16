@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module name="modules">
+    <title>core.modules_module_title</title>
+    <description>core.modules_module_description</description>
+    <version>v0.1</version>
+    <enabled>1</enabled>
+    <is_core>1</is_core> 	
+    <icon_path>modules/modules/assets/img/modules.png</icon_path>
+    <position>0</position>
+    <resource_access_level>
+        <controller name="cpmodulescontroller" interface_type="cp">
+            <group>1</group>
+        </controller>
+        <controller name="upload" interface_type="cp">
+            <group>1</group>
+        </controller>
+    </resource_access_level>
+</module>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module name="mods">
+    <title>
+        <fr>Gestionnaire de modules </fr>
+    </title>
+    <description>
+        <fr>Gestion des  modules et leur contenu.</fr>
+    </description>
+    <version>v0.3</version>
+    <menu></menu>
+    <enabled>1</enabled>
+    <is_core>1</is_core> 	
+    <has_settings>0</has_settings>
+    <type>mod_admin</type>
+    <icon_path>img/icons/modules.png</icon_path>
+    <lang_file_name>modules</lang_file_name>
+</module>

@@ -19,7 +19,7 @@ class CPDashboardController extends CP_Controller {
         }
 
         $this->data->last_login = @date('d, M, Y, g:i a', $this->session->userdata('last_login'));
-        $this->template->build('dashboard', $this->data);
+        $this->template->build('cp/dashboard', $this->data);
     }
  
 

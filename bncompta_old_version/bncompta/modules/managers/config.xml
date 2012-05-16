@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module name="users">
+    <title>
+        <fr>Gestion des gérants</fr>
+    </title>
+    <description>
+        <fr>Gérer les gérants et leurs informations.</fr>
+    </description>
+    <version>v0.2</version>
+    <menu>users</menu>
+    <enabled>1</enabled>
+    <is_core>1</is_core> 	
+    <type>mod_admin</type>
+    <has_settings>0</has_settings>
+    <icon_path>img/icons/users.png</icon_path>
+    <lang_file_name>managers</lang_file_name>
+</module>

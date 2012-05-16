@@ -18,10 +18,7 @@ class Security_Controller extends BNCOMPTA_Controller {
                 'rules' => 'required'
             )
         );
-
-        // Load file language 
-        $this->lang->load('login');
-
+ 
         // Set validation
         $this->form_validation->set_rules($this->validation_config);
         // We set our template theme

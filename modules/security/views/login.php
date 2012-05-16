@@ -8,7 +8,7 @@
         <script type="text/javascript" src="<?php echo base_url() . THEME_PATH; ?>js/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url() . THEME_PATH; ?>js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url() . THEME_PATH; ?>js/jquery.uniform.min.js"></script>
-        
+
     </head>
     <body>
         <?php if ($this->setting->site_status == 1) : ?>
@@ -32,7 +32,7 @@
                     <label class="login"><?php echo lang('password_label'); ?> </label>
                     <input type="password" name="password" value=""/>  
                     <span class="space">
-                        <input type="submit" value="<?php
+                        <input class="submit" type="submit" value="<?php
                 echo lang('connection_label');
                 ?>" class="login" />
                     </span>
@@ -67,14 +67,13 @@
                     <?php endif; ?>
                 </div>
             </div>
-
-
         </div>
 
         <script type="text/javascript" src="<?php echo base_url() . THEME_PATH; ?>js/cufon.js"></script>
         <script type="text/javascript" src="<?php echo base_url() . THEME_PATH; ?>js/qk.font.js"></script>
         <script type="text/javascript">
             $(document).ready(function() { 	
+                
                 $("select, input.mf,input, input:radio, input:file").uniform(); });
             Cufon.replace('h1,h2,h4');
         </script> 

@@ -1,10 +1,15 @@
 
-<h2><?php echo $this->lang->line('welcome_message', '<span>' . $full_name . '</span>'); ?></h2>
-<p style="float:right;"><?php echo lang('common.today_we_are') . date('d, M, Y, g:i a'); ?></p>
-<p><?php echo lang('common.last_login_time') . $last_login; ?></p>
+<h2>Welcome .... </h2>
+<p style="float:right;"> Derniere connexion : </p>
+      $modules = $this->core->moduleforge->getAllModules();
+        foreach ($modules as $key) {
 
-<hr />
-<?php if ($user_information->group_id == 1): ?>
+            $this->modules[$key->getModuleName()] = 'test';
+            $this->modules[$key->getModuleName()] = 'test';
+            $this->modules[$key->getModuleName()] = 'test';
+            $this->modules[$key->getModuleName()] = 'test';
+            $this->modules[$key->getModuleName()] = 'test';
+        }
     <div class="dashboard_menu_icons">
         <!-- Big buttons -->
         <h2><?php echo lang('common_dashboard_heading'); ?></h2>

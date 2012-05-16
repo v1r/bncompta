@@ -8,12 +8,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author Karim Besbes - BNCompta dev team
  * @package BNCompta 
  * @subpackage Admin module 
- * @copyright	Copyright (c) 2011, BNCompta
+ * @copyright	Copyright (c) 2011 2012 
  * @category Modules
- * @since Version 0.1
+ * @since Version 0.2
  * 
  * */
-class Manage extends CP_Controller {
+class cpManagersController extends CP_Controller {
 
     /**
      * Constructor 
@@ -21,14 +21,9 @@ class Manage extends CP_Controller {
      * */
     function __construct() {
         parent::__construct();
-
-        $this->lang->load('managers');
+ 
         $this->config->load('form_validation');
-
-        foreach ($this->controller_data[$this->current_module] as $methods) {
-            $this->method_data = $methods;
-        }
-        $this->method_name = array_keys($this->method_data);
+ 
         (is_ajax()) ? $this->template->set_layout(FALSE) : '';
         $this->template->set_partial('navigation', 'tpl/navigation_view');
     }
@@ -107,7 +102,7 @@ class Manage extends CP_Controller {
      * @return bool
      * @author Karim Besbes
      * */
-    public function _check_email($email) {
+    function _check_email($email) {
         if ($this->bncompta_auth_model->login_exist($email)) {
             $this->form_validation->set_message('_check_email', $this->lang->line('error_email_already_exist'));
             return FALSE;
@@ -121,7 +116,7 @@ class Manage extends CP_Controller {
      * @return bool
      * @author Karim Besbes
      * */
-    public function _check_username($username) {
+    function _check_username($username) {
         if ($this->bncompta_auth_model->login_exist($username)) {
             $this->form_validation->set_message('_check_username', $this->lang->line('error_username_already_exist'));
             return FALSE;

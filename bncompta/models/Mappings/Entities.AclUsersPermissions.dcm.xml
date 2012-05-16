@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping                           http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">      
+    <entity name="Entities\AclUsersPermissions" table="acl_users_permissions"  repository-class="Entities\Repository\AclUsersPermissions">   >                                    
+        <id name="id" type="integer" length="11" column="id">             
+            <generator strategy="AUTO"/>             
+            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1"/>
+        </id> 
+        <field name="accessType" column="access_type" type="string" length="50"/>
+        <field name="createdOn" column="created_on" type="integer" length="10" /> 
+ 
+        <many-to-one field="acl_action" target-entity="Entities\AclActions" inversed-by="acl_user_permission">            
+            <join-column name="action_id" referenced-column-name="id" nullable="false" onDelete="CASCADE"/>
+        </many-to-one>
+        <many-to-one field="user" target-entity="Entities\Users" inversed-by="acl_user_permission">            
+            <join-column name="user_id" referenced-column-name="id" nullable="false" onDelete="CASCADE"/>
+        </many-to-one>
+    </entity>  
+</doctrine-mapping>
+  

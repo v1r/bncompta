@@ -26,7 +26,7 @@ class Auth extends Security_Controller {
     public function __construct() {
         // We call the parent controller 
         parent::__construct();
-     
+      
     }
 
     /**
@@ -47,6 +47,7 @@ class Auth extends Security_Controller {
   
         $this->template->build('login');
     }
+    
 
     public function _check_login($login) {
 

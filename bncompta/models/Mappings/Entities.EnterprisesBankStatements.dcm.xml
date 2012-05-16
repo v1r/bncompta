@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping                           http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">      
+    <entity name="Entities\EnterprisesBankStatements" table="enterprises_bank_statements"  repository-class="Entities\Repository\EnterprisesBankStatements">                                       
+        <id name="id" type="integer" length="11" column="id">             
+            <generator strategy="AUTO"/>             
+            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1"/>
+        </id>  
+        <field name="label" column="label" type="string" length="11"/>
+        <field name="description" column="description" type="string" length="255"/>
+        <field name="date" column="date" type="integer" length="255"/>
+        <field name="ammount" column="ammount" type="float" length="11"/>
+        <many-to-one field="enterprise" target-entity="Entities\Enterprises" inversed-by="enterprises_bank_statements">
+            <join-column referenced-column-name="id" nulltable="false"/>
+        </many-to-one> 
+        <many-to-one field="enterprises_bank_accounts" target-entity="Entities\EnterprisesBankAccounts" inversed-by="enterprises_bank_statements">
+            <join-column referenced-column-name="id" nulltable="false"/>
+        </many-to-one> 
+        <one-to-many field="enterprises_income" target-entity="Entities\EntreprisesIncomes" mapped-by="enterprises_bank_statements"/>
+    </entity>  
+</doctrine-mapping>
+ 
+ 
+        

@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<module name="entreprises">
-    <title>
-        <fr>Gestion d'entreprises </fr>
-    </title>
-    <description>
-        <fr>Gérer les entreprises.</fr>
-    </description>
-    <version>v0.2</version>
-    <menu>entreprises</menu>
+<module name="enterprises">
+    <title>core.enterprises_module_title</title>
+    <description>core.enterprises_module_description</description>
+    <version>v0.1</version>
     <enabled>1</enabled>
     <is_core>1</is_core> 	
-    <type>mod_admin</type>
-    <has_settings>0</has_settings>
-    <icon_path>img/icons/entreprises.png</icon_path>
-    <lang_file_name>entreprises</lang_file_name>
+    <icon_path>modules/enterprises/assets/img/enterprises.png</icon_path>
+    <position>0</position>
+    <resource_access_level>
+        <controller name="cpenterprisescontroller" interface_type="cp">
+            <group>1</group>
+        </controller>
+    </resource_access_level>
 </module>

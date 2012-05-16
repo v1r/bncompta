@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Manage extends Entreprises {
+class MpBankAccountsController extends Enterprises_Controller {
 
     function __construct() {
         parent::__construct();
@@ -11,12 +11,12 @@ class Manage extends Entreprises {
         $this->config->load('form_validation');
     }
 
-    public function index() {
+    public function indexAction() {
         $this->data->bank_accounts = $this->bank_accounts_model->get_bank_account_data($this->current_entreprise, FALSE);
         $this->template->build('tpl/overview_view.php');
     }
 
-    public function add() {
+    public function addAction() {
         if ($this->form_validation->run('bank_accounts') !== FALSE) {
             $cbanque = $this->input->post('rib_bank_code');
             $cguichet = $this->input->post('rib_branch_code');
@@ -36,9 +36,9 @@ class Manage extends Entreprises {
             );
 
             if ($this->bank_accounts_model->add_bank_account($data)) {
-                $this->session->set_flashdata('success',  lang('success_message'));
+                $this->session->set_flashdata('success', lang('success_message'));
             } else {
-                $this->session->set_flashdata('error',  lang('error_message'));
+                $this->session->set_flashdata('error', lang('error_message'));
             }
             foreach ($this->config->item('bank_accounts') as $validation) {
                 $repopulate->{$validation['field']} = set_value($validation['field']);
@@ -55,7 +55,7 @@ class Manage extends Entreprises {
         $this->template->build('tpl/create_view', $this->data);
     }
 
-    public function edit($bank_account_id, $action ='') {
+    public function editAction($bank_account_id, $action = '') {
 
         if ($action === 'update' AND $this->input->post() === FALSE) {
             redirect('bank_accounts/manage');
@@ -80,7 +80,7 @@ class Manage extends Entreprises {
                     'contact' => $this->input->post('contact'),
                     'description' => $this->input->post('description')
                 );
- 
+
                 if ($this->bank_accounts_model->update_bank_account($bank_account_id, $data)) {
                     $this->session->set_flashdata('success', lang('success_message'));
                     redirect('bank_accounts/manage');
@@ -101,17 +101,14 @@ class Manage extends Entreprises {
             }
         } else {
             $this->data->repopulate = $this->bank_accounts_model->get_bank_account_data($this->current_entreprise, $bank_account_id);
-             if(empty($this->data->repopulate))
-             {
-                 redirect('bank_accounts/manage');
-                 exit();
-             }
-            
+            if (empty($this->data->repopulate)) {
+                redirect('bank_accounts/manage');
+                exit();
+            }
         }
         $this->template->build('tpl/edit_view', $this->data);
     }
 
-   
     /**
      * Credit to wikipedia
      * @see http://fr.wikipedia.org/wiki/Basic_Bank_Account_Number#Algorithme_de_v.C3.A9rification_en_PHP

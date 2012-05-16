@@ -40,7 +40,7 @@ class AclResources
     /**
      * @var Entities\Modules
      */
-    private $modules;
+    private $module;
 
     public function __construct()
     {
@@ -158,22 +158,47 @@ class AclResources
     }
 
     /**
-     * Set modules
+     * Set module
      *
-     * @param Entities\Modules $modules
+     * @param Entities\Modules $module
      */
-    public function setModules(\Entities\Modules $modules)
+    public function setModule(\Entities\Modules $module)
     {
-        $this->modules = $modules;
+        $this->module = $module;
     }
 
     /**
-     * Get modules
+     * Get module
      *
-     * @return Entities\Modules $modules
+     * @return Entities\Modules $module
      */
-    public function getModules()
+    public function getModule()
     {
-        return $this->modules;
+        return $this->module;
+    }
+    /**
+     * @var Entities\AclGroupsPermissions
+     */
+    private $group_permission;
+
+
+    /**
+     * Add group_permission
+     *
+     * @param Entities\AclGroupsPermissions $groupPermission
+     */
+    public function addGroupPermission(\Entities\AclGroupsPermissions $groupPermission)
+    {
+        $this->group_permission[] = $groupPermission;
+    }
+
+    /**
+     * Get group_permission
+     *
+     * @return Doctrine\Common\Collections\Collection $groupPermission
+     */
+    public function getGroupPermission()
+    {
+        return $this->group_permission;
     }
 }

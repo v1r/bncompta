@@ -71,7 +71,7 @@ class Doctrine {
         } 
         // create the EntityManager
         $em = \Doctrine\ORM\EntityManager::create($connectionOptions, $config);
-
+         
         // store it as a member, for use in our CodeIgniter controllers.
         $this->em = $em;
     }

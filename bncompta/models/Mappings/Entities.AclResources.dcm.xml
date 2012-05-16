@@ -3,14 +3,17 @@
     <entity name="Entities\AclResources" table="acl_resources"  repository-class="Entities\Repository\AclResources">   >                                    
         <id name="id" type="integer" length="11" column="id">             
             <generator strategy="AUTO"/>             
-            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1"/></id> 
+            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1"/>
+        </id> 
         <field name="resourceIdentifer" column="resource_identifer" type="string" length="255"/>
         <field name="resourceDescription" column="resource_description" type="string" length="255"/>
         <field name="resourceType" column="resource_type" type="string" column-definition="char(2) NOT NULL" length="2" /> 
         <field name="createdOn" column="created_on" type="integer" length="10" /> 
         <one-to-many field="actions" target-entity="Entities\AclActions" mapped-by="resources" />
-        <many-to-one field="modules" target-entity="Entities\Modules" inversed-by="resources">            
-            <join-column name="module_id" referenced-column-name="id" nullable="false"/>
+        <one-to-many field="group_permission" target-entity="Entities\AclGroupsPermissions" mapped-by="acl_resource" />
+        <one-to-many field="enterprise_permission" target-entity="Entities\AclEnterprisesPermissions" mapped-by="acl_resource" />
+        <many-to-one field="module" target-entity="Entities\Modules" inversed-by="resource">            
+            <join-column name="module_id" referenced-column-name="id" nullable="false" onDelete="CASCADE"/>
         </many-to-one>
     </entity>  
 </doctrine-mapping>

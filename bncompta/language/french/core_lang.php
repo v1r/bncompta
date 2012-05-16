@@ -1,10 +1,165 @@
 <?php
 
 /**
- * Header language 
- * @author Karim Besbes
+ *  PACKAGE CORE 
+ *  LANG English 
+ *  @author BNCOMPTA DEV TEAM 
  */
-// Header, body, footer, Dashboard, Menu...
+/*
+  /------------------------------------------------------------------------------
+  |  Core -  Common lang
+ */
+
+$lang['core.common_name_label'] = 'Name';
+$lang['core.common_title_label'] = 'Title';
+$lang['core.common_description_label'] = 'Decription';
+$lang['core.common_add_label'] = 'Add';
+$lang['core.common_edit_label'] = 'Edit';
+$lang['core.common_delete_label'] = 'Delete';
+$lang['core.common_enable_label'] = 'Enable';
+$lang['core.common_diable_label'] = 'Disable';
+$lang['core.common_first_name_label'] = 'First Name';
+$lang['core.common_last_name_label'] = 'Last Name';
+$lang['core.common_name_suffix_label'] = 'Name Suffix';
+$lang['core.common_middle_name_label'] = 'Middle Name';
+$lang['core.common_female_label'] = 'Female';
+$lang['core.common_male_label'] = 'Male';
+$lang['core.common_gender_label'] = 'Gender';
+$lang['core.common_language_label'] = 'Language';
+$lang['core.common_default_language_label'] = 'Default Language';
+$lang['core.common_age_label'] = 'Age';
+$lang['core.common_birthday_label'] = 'Birthday';
+$lang['core.common_birthdate_label'] = 'Birthdate';
+$lang['core.common_version_label'] = 'Version';
+$lang['core.common_email_label'] = 'Email address';
+$lang['core.common_group_label'] = 'Group';
+$lang['core.common_username_label'] = 'Username';
+$lang['core.common_identity_label'] = 'Identity';
+$lang['core.common_login_label'] = 'Login';
+$lang['core.common_password_label'] = 'Password';
+$lang['core.common_type_label'] = 'Type';
+$lang['core.common_system_label'] = 'System';
+$lang['core.common_action_label'] = 'Action';
+$lang['core.common_actions_label'] = 'Actions';
+$lang['core.common_install_label'] = 'Install';
+$lang['core.common_overview_label'] = 'Overview';
+$lang['core.common_modules_label'] = 'Modules';
+$lang['core.common_no_answer_label'] = 'N/A';
+$lang['core.common_submit_label'] = 'Submit';
+
+/*
+  /-------------------------------------------------------------------------------
+  |  Dashboard Core Module Lang
+  |-------------------------------------------------------------------------------
+  |
+ */
+
+
+ $lang['core.dashboard_last_connection_label'] = 'Dernière visite le ' ;
+ $lang['core.dashboard_welcome_label']   = 'Bienvenue '; 
+/*
+  /-------------------------------------------------------------------------------
+  |  Security Core Module Lang
+  |-------------------------------------------------------------------------------
+  |
+ */
+
+/*
+  /-------------------------------------------------------------------------------
+  |  Modules Core Module Lang
+  |-------------------------------------------------------------------------------
+  |
+ */
+
+$lang['core.modules_module_description'] = "Ce module permet la gestion des modules et des widgets.";
+$lang['core.modules_module_title'] = "Gesionnaire de modules";
+$lang['core.modules_list_modules_label'] = "Liste des modules";
+$lang['core.modules_installed_modules_label'] = "Modules installés";
+/*
+  /-------------------------------------------------------------------------------
+  |  Managers Core Module Lang
+  |-------------------------------------------------------------------------------
+  |
+ */
+
+$lang['core.managers_module_description'] = "Ce module permet la gestion des gérants.";
+$lang['core.managers_module_title'] = "Gesionnaire des comptes gérants";
+$lang['core.managers_list_managers_label'] = "Liste des gérants";
+$lang['managers_list_label'] = 'Liste des gérants';
+$lang['managers.add_manager_label'] = 'Ajouter un gérant';
+$lang['errors_label'] = 'Veuillez vérifier les erreur(s) indiquées ci-dessous.';
+$lang['error_email_already_exist'] = 'Cette adresse émail n\'est plus disponible.';
+$lang['error_username_already_exist'] = 'Ce nom d\'utilisateur n\'est plus disponible.';
+$lang['error_label'] = 'Oups, une erreur est survenue';
+$lang['error_entreprise_not_exist'] = 'Malheureusement, cette entreprise n\'existe pas !';
+$lang['error_entreprise_has_manager'] = 'Un gérant est déjà associé à cette entreprise! ';
+
+/*
+  /-------------------------------------------------------------------------------
+  |  Enterprises Core Module Lang
+  |-------------------------------------------------------------------------------
+  |
+ */
+$lang['core.enterprises_module_title']  = 'Gestionnaire des comptes entreprises';
+$lang['core.enterprises_module_description'] = 'Ce module permet la creation et la gestion des modules d\'entreprise.';
+
+$lang['entreprise_list_label'] = 'Liste des entreprises';
+$lang['entreprises_add_entreprise_label'] = 'Ajouter une nouvelle entreprise';
+$lang['entpreprises_no_manager_assigned'] = '<span style="color:red;">Non assigné</span>';
+$lang['entreprise_manager_assigned'] = 'Le gérant a été assigné avec succès ';
+
+// Errors handling
+
+$lang['entreprise_email_label'] = 'Oups, une erreur est survenue';
+$lang['entreprise_description_label'] = 'Malheureusement, cette entreprise n\'existe pas !';
+$lang['error_entreprise_has_manager'] = 'Un gérant est déjà associé à cette entreprise! ';
+$lang['created_on_label'] = 'Vous n\'avez pas encore ajouté de gérants. ';
+$lang['entreprise_gerant_label'] = '';
+
+// Empty 
+
+$lang['empty_entreprises_list'] = 'Vous n\'avez pas encore ajouté d\'entreprises';
+$lang['modules.select_module_to_upload_label'] = 'Uploader un module ';
+$lang['entreprises.select_manager_label'] = 'Sélectionner un gérant';
+/*
+  /-------------------------------------------------------------------------------
+  |  Bank Accounts Core Module Lang
+  |-------------------------------------------------------------------------------
+  |
+ */
+
+$lang['core.bank_accounts_module_description'] = 'Comptes bancaires' ;
+$lang['core.bank_accounts_module_title'] = 'Gestion des comptes bancaires de l\'entreprise.';
+
+/*
+  /-------------------------------------------------------------------------------
+  | Controllers And Action Lang 
+  |-------------------------------------------------------------------------------
+  | 
+ */
+
+$lang['db.bank_accounts_mpbankaccountscontroller_resource_lang'] = 'Module de gestion des comptes bancaires' ; 
+
+/***********************/
+
+
+
+
+
+
+
+// Empty data 
+
+$lang['empty_no_managers_list'] = 'Vous n\'avez pas encore ajouté de gérants.';
+
+// Success 
+
+$lang['success_user_add'] = 'L\'utilisateur a été ajouté avec succés';
+
+
+
+
+
 $lang['success_message'] = 'Opération effectuée avec succès !';
 $lang['error_message'] = 'Oups! L\'opération demandée n\'a pas été effectuée';
 $lang['welcome_message'] = 'Bienvenue, $1 !';
@@ -119,9 +274,9 @@ $lang['common.managers_label'] = 'Gérants';
 $lang['common.users_label'] = 'Utilisateurs';
 $lang['common.by_group_label'] = 'Par groupe';
 $lang['common.by_entreprise_label'] = 'Par entreprise';
-$lang['common.slug_label'] = 'Label' ;  
+$lang['common.slug_label'] = 'Label';
 $lang['common.ammount_label'] = 'Somme';
-$lang['common.bank_account_label'] = 'Compte bancaire'; 
+$lang['common.bank_account_label'] = 'Compte bancaire';
 
 
 // Modules operations 
@@ -133,5 +288,14 @@ $lang['common.edit_label'] = 'Modifier';
 $lang['common.close_label'] = 'Clôturer';
 $lang['common.delete_label'] = 'Supprimer';
 $lang['common.import_button_label'] = 'Importer';
+$lang['login_label'] = 'Identifiant';
+$lang['password_label'] = 'Mot de passe';
+$lang['remember_me_label'] = 'Se souvenir de moi';
+$lang['connection_label'] = 'Connexion';
 
+$lang['login_error_label'] = 'Erreur de connexion :';
+$lang['login_error_message'] = 'Le nom d\'utilisateur ou le mot de passe que vous avez saisi est incorrect. ';
+$lang['logout_label'] = 'Déconnexion';
+$lang['logout_message'] = 'Vous êtes maintenant déconnecté.';
 ?>
+ 

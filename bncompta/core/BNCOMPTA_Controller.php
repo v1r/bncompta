@@ -9,22 +9,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class BNCOMPTA_Controller extends CI_Controller {
 
     /**
-     * @access public 
-     */
-    public $current_module;
-    public $current_controller;
-    public $current_method;
-    public $user_rules;
-    public $requested_module;
-    public $current_segment;
-    public $module_data;
-    public $controller_data;
-    public $method_data;
-    public $method_name;
-    public $entreprise_data;
-    public $modules_location;
-
-    /**
      * 
      * @author Karim Besbes 
      * Parent constructor
@@ -34,39 +18,18 @@ class BNCOMPTA_Controller extends CI_Controller {
 
         //Set the parent constructor
         parent::__construct();
+        $this->modules = $this->core->moduleforge->initModules();
 
-        unset($base_url_parts);
+        $this->userACL = $this->session->userdata("acl");
+
         // Get the user data objects 
         if ($this->core->auth->already_logged_in()) {
+            $this->user =  (object) $this->logged_in_user = $this->session->all_userdata();
 
-            $this->logged_in_user = $this->bncompta_auth->get_user_data();
-
-            if ($this->setting->site_status == 1) {
-                if ($this->logged_in_user->group_id != 1) {
-                    $this->session->sess_destroy();
-                    show_error('Le site est hors ligne.');
-                }
+            if (!isset($this->logged_in_user)) {
+                redirect('auth/login');
+                exit;
             }
-
-            //** /Get current visited uri segment 
-
-            $this->current_module = $this->router->fetch_module();
-            $this->current_controller = $this->router->fetch_class();
-            $this->current_method = $this->router->fetch_method();
-
-            // Let's put them in an array
-
-            $this->requested_module = array($this->current_module, $this->current_controller, $this->current_method);
-
-
-
-            $modules = (object) ($this->session->userdata('modules'));
-
-            $this->module_data = new ArrayObject($modules, ArrayObject::ARRAY_AS_PROPS);
-
-            $this->current_segment = $this->current_module . '/' . $this->current_controller;
-
-            $this->modules_location = array_keys(Modules::$locations);
         }
     }
 

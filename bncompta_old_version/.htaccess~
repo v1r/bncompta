@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+# For security reasons, Option followsymlinks cannot be overridden.
+#	Options +FollowSymLinks
+	Options +SymLinksIfOwnerMatch
+	RewriteEngine on
+ 
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+
+	<IfModule mod_php5.c>
+		RewriteRule ^(.*)$ index.php/$1 [L]
+	</IfModule>
+
+	<IfModule !mod_php5.c>
+		RewriteRule ^(.*)$ index.php?/$1 [L]
+	</IfModule>
+</IfModule>
+
+ 

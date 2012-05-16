@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping                           http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">      
+    <entity name="Entities\EnterprisesProfiles" table="enterprises_profiles" 
+    repository-class="Entities\Repository\EnterprisesProfiles">                                    
+        <id name="id" type="integer" length="11" column="id">             
+            <generator strategy="AUTO"/>             
+            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1"/>
+        </id> 
+        <field name="turnOver" column="turn_over" type="float" length="11"/>
+        <field name="siret" column="siret" type="string" length="50"/>
+        <field name="isTva" column="is_tva" type="smallint" length="1" /> 
+        <field name="tva" column="tva" type="string" length="50"/>
+        <field name="name" column="name" type="string" length="50"/>
+        <field name="description" column="description" type="string" length="250"/>
+        <field name="homePage" column="home_page" type="string" length="250"/>
+        <field name="logoPath" column="logo_path" type="string" length="250"/>
+        <field name="city" column="city" type="string" length="250"/>
+        <field name="country" column="country" type="string" length="250"/>
+        <field name="phoneNumber" column="phoneNumber" type="string" length="250"/>
+        <field name="faxNumber" column="faxNumber" type="string" length="250"/>
+        <field name="updatedOn" column="updated_on" type="integer" length="10" /> 
+        <field name="createdOn" column="created_on" type="integer" length="10" /> 
+      
+        <many-to-one field="enterprise" target-entity="Entities\Enterprises" inversed-by="enterpriseProfile">            
+            <join-column   referenced-column-name="id" nullable="false"/>
+        </many-to-one>
+    </entity>  
+</doctrine-mapping>
+ 

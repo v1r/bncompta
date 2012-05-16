@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping                           http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">      
+    <entity name="Entities\EntreprisesIncomes" table="enterprises_incomes"  repository-class="Entities\Repository\EntreprisesIncomes">                                       
+        <id name="id" type="integer" length="11" column="id">             
+            <generator strategy="AUTO"/>             
+            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1"/>
+        </id>  
+        
+        <field name="date" column="date" type="integer" length="255"/>
+        <field name="ht" column="ht" type="integer" length="255"/>
+        <field name="startDate" column="start_date" type="integer" length="10"/>
+        <field name="tva" column="tva" type="float" length="11"/>
+        <field name="filePath" column="file_path" type="string" length="10" /> 
+        <field name="description" column="description" type="string" length="10" /> 
+        
+        <many-to-one field="enterprise" target-entity="Entities\Enterprises" inversed-by="enterprises_income">
+            <join-column referenced-column-name="id" nulltable="false"/>
+        </many-to-one> 
+        
+        <many-to-one field="enterprises_bank_statements" target-entity="Entities\EnterprisesBankStatements" inversed-by="enterprises_income">
+            <join-column referenced-column-name="id" nulltable="false"/>
+        </many-to-one> 
+        
+        
+        <many-to-one field="enterprises_client" target-entity="Entities\EnterprisesClients" inversed-by="enterprises_income">
+            <join-column referenced-column-name="id" nulltable="false"/>
+        </many-to-one> 
+        
+        
+        <many-to-one field="enterprises_accounting_year" target-entity="Entities\EnterprisesAccountingYear" inversed-by="enterprises_income">
+            <join-column referenced-column-name="id" nulltable="false"/>
+        </many-to-one> 
+       
+        
+    </entity>  
+</doctrine-mapping>
+ 
+ 
+   

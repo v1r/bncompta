@@ -25,8 +25,7 @@ class Logout extends BNCOMPTA_Controller {
      */
     public function __construct() {
         parent::__construct();
-        // Load file language 
-        $this->lang->load('login');
+   
     }
 
     /**

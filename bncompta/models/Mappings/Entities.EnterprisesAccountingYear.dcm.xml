@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping                           http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">      
+    <entity name="Entities\EnterprisesAccountingYear" table="enterprises_accounting_year"  repository-class="Entities\Repository\EnterprisesAccountingYear">                                       
+        <id name="id" type="integer" length="11" column="id">             
+            <generator strategy="AUTO"/>             
+            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1"/>
+        </id>  
+        <field name="label" column="label" type="string" length="255"/>
+        <field name="description" column="description" type="string" length="255"/>
+        <field name="startDate" column="start_date" type="integer" length="10"/>
+        <field name="endDate" column="end_date" type="integer" length="10"/>
+        <field name="closed" column="closed" type="integer" length="10" /> 
+        <field name="isDefault" column="is_default" type="integer" length="10" /> 
+        <many-to-one field="enterprise" target-entity="Entities\Enterprises" inversed-by="enterprises_accounting_year">
+            <join-column referenced-column-name="id" nulltable="false"/>
+        </many-to-one>    
+        
+        <one-to-many field="enterprises_income" target-entity="Entities\EntreprisesIncomes" mapped-by="enterprises_accounting_year"/>
+        
+    </entity>  
+</doctrine-mapping>
+ 
+ 
+   

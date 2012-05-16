@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping                           http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">      
+    <entity 
+        name="Entities\AclEnterprisesPermissions" 
+        table="acl_enterprises_permissions" 
+        repository-class="Entities\Repository\AclEnterprisesPermissions">                                    
+        <id name="id" type="integer" length="11" column="id">             
+            <generator strategy="AUTO"/>             
+            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1"/>
+        </id> 
+        <field name="accessType" column="access_type" type="string" length="50"/>
+        <field name="createdOn" column="created_on" type="integer" length="10" /> 
+        <many-to-one field="acl_resource" target-entity="Entities\AclResources" inversed-by="enterprise_permission">            
+            <join-column name="resource_id" referenced-column-name="id" nullable="false"/>
+        </many-to-one>
+        <many-to-one field="enterprise" target-entity="Entities\Enterprises" inversed-by="enterprise_permission">            
+            <join-column name="enterprise_id" referenced-column-name="id" nullable="false"/>
+        </many-to-one>
+    </entity>  
+</doctrine-mapping>
+  

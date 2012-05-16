@@ -10,9 +10,10 @@
         <field name="moduleDescription" column="description" type="string" length="100" />
         <field name="moduleVersion" column="version" type="decimal" length="2"        /> 
         <field name="moduleIsCore" column="is_core" type="smallint" length="1"        />
-        <field name="moduleIsEnabled" column="is_enabled" type="smallint" length="1"  /> 
+        <field name="moduleIsEnabled" column="enabled" type="smallint" length="1"  /> 
         <field name="moduleIconPath" column="icon_path" type="string" length="255"  /> 
         <field name="modulePosition" column="position" type="smallint" length="1"  /> 
-         <one-to-many field="resources" target-entity="Entities\AclResources" mapped-by="modules" />
+         <one-to-many field="resource" target-entity="Entities\AclResources" mapped-by="module" />
     </entity>  
 </doctrine-mapping>
+ 

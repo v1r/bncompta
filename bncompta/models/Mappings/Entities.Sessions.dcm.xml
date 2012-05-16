@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping                           http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">      
+    <entity name="Entities\Sessions" table="sessions"  repository-class="Entities\Repository\Sessions">   >                                    
+        <id name="sessionSessionId" column="session_id" type="string" length="40" >           
+            <generator strategy="AUTO"/>             
+            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1"/>         
+        </id>
+        <field name="sessionIpAddress" column="ip_address" type="string" length="16"/>
+        <field name="sessionUserAgent" column="user_agent" type="string" length="120"/>
+        <field name="sessionLastActivity" column="last_activity" type="integer" length="10"  /> 
+        <field name="sessionUserData" column="user_data" type="text"  /> 
+    </entity>  
+</doctrine-mapping>
+ 

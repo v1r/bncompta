@@ -3,85 +3,96 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Entreprises management controller 
+ *  Enterprises Controller 
  * 
  * @author Karim Besbes - BNCompta dev team
- * @package BNCompta 
+ * @package CP
  * @subpackage Entreprises module 
  * @copyright Copyright (c) 2011, BNCompta
  * @category Entreprises module
  * @since Version 0.1
  * 
  * */
-class Manage extends CP_Controller {
+class cpEnterprisesController extends CP_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->lang->load('entreprises');
-        $this->load->helper('inflector');
-        $this->config->load('form_validation');
-        foreach ($this->controller_data[$this->current_module] as $methods) {
-            $this->method_data = $methods;
-        }
 
-        $this->method_name = array_keys($this->method_data);
         (is_ajax()) ? $this->template->set_layout(FALSE) : '';
-        $this->template->set_partial('navigation', 'tpl/navigation_view');
-       
+        $this->template->set_partial('navigation', 'build/navigation/navigation_view');
     }
 
     public function index() {
-        $entreprises_data = new ArrayObject($this->entreprise_model->get_all_entreprises(), ArrayObject::ARRAY_AS_PROPS);
-        $availble_managers = $this->manager_model->get_all_managers();
-        $manager_name = array();
 
-        // Let's get the manager name 
-
-        foreach ($entreprises_data as $key) {
-            if ($key->manager_id != 0) {
-                $manager_name[$key->id] = $this->manager_model->get_manager_name($key->manager_id);
-            }
-        }
-        //dump($manager_name);
-        $available_managers = $this->manager_model->get_all_managers();
-        $this->data->entreprises_data = $entreprises_data;
-        $this->data->methods = new ArrayObject($this->method_data, ArrayObject::ARRAY_AS_PROPS);
-        $this->data->manager_name = $manager_name;
-        $this->data->available_managers = $available_managers;
-        $this->template->build('tpl/entreprise_list', $this->data);
+        $enterprises = $this->doctrine->em->getRepository('Entities\Enterprises')->findALL();
+        dump($enterprises);
+        //$this->template->build('tpl/entreprise_list', $this->data);
     }
 
-    public function add() {
-        if ($_POST) {
-            $label = underscore($this->input->post('label'));
-            $name = $this->input->post('name');
-            $email = $this->input->post('email');
-            $description = $this->input->post('description');
-            $modules = $this->input->post('modules');
-        }
-        // We try to add the entreprise
-        if ($this->form_validation->run('add_entreprise') !== FALSE) {
-            if ($this->entreprise_model->add_entreprise($label, $name, $email, $description, $modules)) {
-                // Flash success
-                $this->session->set_flashdata('success', lang('success_entreprise_add'));
-                redirect('entreprises/manage');
+    public function addAction() {
+
+
+        if (post_request("submit")) {
+
+
+            $enterprise = new Entities\Enterprises;
+            $eProfile = new Entities\EnterprisesProfiles;
+            $aclEnterprise = new Entities\AclEnterprisesPermissions;
+            $enterprise->setEnterpriseLabel(post_request('label', TRUE));
+            $enterprise->setEnterpriseIsAga(0);
+            $enterprise->setCreatedOn(now());
+            $this->doctrine->em->persist($enterprise);
+            $this->doctrine->em->flush();
+            $eProfile->setDescription(post_request('label', TRUE));
+            $eProfile->setName(post_request('name', TRUE));
+            $eProfile->setCity('');
+            $eProfile->setCountry('');
+            $eProfile->setCreatedOn(now());
+            $eProfile->setDescription(post_request('description', TRUE));
+            $eProfile->setEnterprise($enterprise);
+            $eProfile->setFaxNumber('');
+            $eProfile->setHomePage('');
+            $eProfile->setIsTva(0);
+            $eProfile->setLogoPath('');
+            $eProfile->setPhoneNumber('');
+            $eProfile->setTurnOver('');
+            $eProfile->setSiret('');
+            $eProfile->setTva(0);
+            $eProfile->setUpdatedOn(now());
+            $this->doctrine->em->persist($eProfile);
+            $this->doctrine->em->flush();
+            $enterprise->setProfile($eProfile);
+            $this->doctrine->em->persist($enterprise);
+            $this->doctrine->em->flush();
+            foreach (post_request('modules') as $key => $resource_id) {
+
+                $resource = $this->doctrine->em->getRepository('Entities\AclResources')->findById($resource_id);
+
+                $aclEnterprise->setAccessType(Acl::ACCESS_GRANTED);
+                $aclEnterprise->setAclResource($resource[0]);
+                $aclEnterprise->setCreatedOn(now());
+                $aclEnterprise->setEnterprise($enterprise);
+                $this->doctrine->em->persist($aclEnterprise);
+                $this->doctrine->em->flush();
+                unset($aclEnterprise);
+                unset($resource);
             }
-            else
-                $this->session->flashdata('error', 'erreur');
+            unset($enterprise);
+            unset($eProfile);
         }
-        else {
-            foreach ($this->config->item('add_entreprise') as $validation) {
-                $repopulate->{$validation['field']} = set_value($validation['field']);
-            }
-            $this->data->repopulate = & $repopulate;
+
+        $modules = $this->doctrine->em->getRepository('Entities\AclResources')
+                ->findBy(array('resourceType' => 'mp'));
+        $this->data->modules = array();
+
+        foreach ($modules as $key) {
+            $this->data->modules[$key->getResourceIdentifer()]->resource_id = $key->getId();
+            $this->data->modules[$key->getResourceIdentifer()]->description = $key->getResourceDescription();
         }
-        $this->session->flashdata('success', 'ajout avec sucee');
 
-        $this->data->mod_entreprise = $mod_entreprise = $this->entreprise_model->get_entreprise_modules();
+        unset($modules);
 
-
-
-        $this->template->build('tpl/add_entreprise_form', $this->data);
+        $this->template->build('build/cp/enterprise_add_form_view', $this->data);
     }
 
     public function assign($entreprise_id, $manager_id) {
@@ -123,7 +134,7 @@ class Manage extends CP_Controller {
             $repopulate = $this->entreprise_model->get_entreprise_data($entreprise_id);
             $this->data->repopulate = $repopulate[0];
         }
-        $this->data->mod_entreprise = $mod_entreprise =  unserialize($this->entreprise_model->get_entreprise_modules_by_id($entreprise_id));
+        $this->data->mod_entreprise = $mod_entreprise = unserialize($this->entreprise_model->get_entreprise_modules_by_id($entreprise_id));
         $this->data->entreprise_mdoules = $entreprise_mdoules = $this->entreprise_model->get_entreprise_modules();
         $this->template->build('tpl/edit_entreprise_view');
     }

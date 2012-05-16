@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping                           http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">      
+    <entity name="Entities\Groups" table="groups" >                                    
+        <id name="id" type="integer" length="11" column="id">             
+            <generator strategy="AUTO"/>             
+            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1" />         
+        </id>          
+        <field name="groupName" column="group_name" type="string" length="100"/>   
+        <field name="groupDescription" column="group_description" type="string" length="100"/>
+        <field name="interfacePrefix" column="interface" type="string" column-definition="CHAR(2) NOT NULL" length="2"  /> 
+        <one-to-many field="users" target-entity="Entities\Users" mapped-by="groups" />
+        <one-to-many field="group_permission" target-entity="Entities\AclGroupsPermissions" mapped-by="group" />
+  
+    </entity>  
+</doctrine-mapping>

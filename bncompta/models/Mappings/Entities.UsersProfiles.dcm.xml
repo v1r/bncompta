@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">      
+    <entity name="Entities\UsersProfiles" table="users_profiles">                                    
+        <id name="id" type="integer" length="11" column="id">             
+            <generator strategy="AUTO"/>             
+            <sequence-generator sequence-name="tablename_seq" allocation-size="100" initial-value="1" />         
+        </id>          
+        <field name="firstName" column="first_name" type="string" length="50"/>   
+         <field name="lastName" column="last_name" type="string" length="50"/>   
+        <field name="address" column="address" type="string" length="50"/>    
+        <field name="officeNumber" column="office_number" type="string" length="50"/>   
+        <field name="faxNumber" column="fax_number" type="string" column-definition="CHAR(4) NOT NULL" />        
+        <field name="homeNumber" column="home_number"   type="integer" length="10" /> 
+        <field name="position" column="position"   type="integer" length="10" /> 
+        <field name="gtak" column="gtalk" type="integer" length="10"  />
+        <one-to-one field="user" target-entity="Entities\Users">
+            <join-column  referenced-column-name="id" />
+        </one-to-one>
+    </entity>  
+</doctrine-mapping>
+ 

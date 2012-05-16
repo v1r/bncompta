@@ -1,11 +1,15 @@
+ BNCOMPTA 
+===========
+
+
 Logiciel libre de comptabilité pour les indépendants, facile à utiliser basé sur le modèle de recettes/dépenses.
 
-PLEASE NOTE : 
-
+| NOTE |
+ ======
 BNCOMPTA is under heavy development, a lot of efforts is being made to rewrite the entire code of the old version. 
 
-
- @todo 
+| TODO  |
+ =======
 
 - Integrating  Doctrine [Done] 
 - Doctrine db Mapping [Done] see bncompta/models/mapping 
